@@ -40,16 +40,7 @@ const MainHeader = () => {
         <AppBar position="static" sx={{background: "#FFF", color: "#000000"}}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="div"
-                        className="logo"
-                        sx={{mr: 2, display: {xs: 'none', md: 'flex'}}}
-                    >
-                        Oscar Guzmán
-                    </Typography>
-
+                    <img src="/LogoOGPDEV2.png" alt="Logo"/>
                     <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
                         <IconButton
                             size="large"
