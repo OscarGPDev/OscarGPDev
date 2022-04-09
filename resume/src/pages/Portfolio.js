@@ -3,16 +3,16 @@ import Typography from "@mui/material/Typography";
 import {useTranslation} from "react-i18next";
 import {CameraIndoor, FitnessCenter, MusicNote, VideogameAsset} from "@mui/icons-material";
 
-const AboutMe = () => {
+const Portfolio = () => {
     const {t: translation} = useTranslation();
     return (
         <Card variant="outlined" sx={{height: {xs:"100%", md:"auto", lg:"70vh"}}}>
             <CardContent sx={{padding: "2rem"}}>
                 <Typography variant="h3" gutterBottom>
-                    {translation('aboutMe_title')}
+                    {translation('portfolio_title')}
                 </Typography>
                 <Typography variant="body1" gutterBottom align="justify">
-                    {translation('aboutMe_body')}
+                    {translation('portfolio_body')}
                 </Typography>
                 <TableContainer component={Paper} sx={{ width: {
                     xs: "100%",
@@ -42,4 +42,4 @@ const AboutMe = () => {
         </Card>
     );
 };
-export default AboutMe;
+export default Portfolio;

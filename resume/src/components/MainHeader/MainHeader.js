@@ -20,7 +20,7 @@ const MainHeader = () => {
     const [anchorElNav, setAnchorElNav] = useState(null);
 
     const location = useLocation();
-    const {t} = useTranslation();
+    const {t:translate} = useTranslation();
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -32,7 +32,7 @@ const MainHeader = () => {
     };
     const navLinkStyles = {
         display: "block",
-        margin: "1rem 0",
+        margin: "0.5rem 0",
         textDecoration: "none",
     };
 
@@ -40,7 +40,12 @@ const MainHeader = () => {
         <AppBar position="static" sx={{background: "#FFF", color: "#000000"}}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <img src="/LogoOGPDEV2.png" alt="Logo"/>
+                    <Box
+                        component="div"
+                        sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}
+                    >
+                        <img src="/LogoOGPDEV2.png" alt="Logo"/>
+                    </Box>
                     <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
                         <IconButton
                             size="large"
@@ -71,26 +76,37 @@ const MainHeader = () => {
                             }}
                         >
                             <MenuItem key="header_menu_portfolio" onClick={handleCloseNavMenu}>
-                                <Typography textAlign="center">{t("header_menu_portfolio")}</Typography>
+                                <Typography textAlign="center">{translate("header_menu_portfolio")}</Typography>
                             </MenuItem>
                             <MenuItem key="header_menu_education" onClick={handleCloseNavMenu}>
-                                <Typography textAlign="center">{t("header_menu_education")}</Typography>
+                                <Typography textAlign="center">{translate("header_menu_education")}</Typography>
                             </MenuItem>
                             <MenuItem key="header_menu_experience" onClick={handleCloseNavMenu}>
-                                <Typography textAlign="center">{t("header_menu_experience")}</Typography>
+                                <Typography textAlign="center">{translate("header_menu_experience")}</Typography>
                             </MenuItem>
                         </Menu>
                     </Box>
-                    <Typography
-                        variant="h6"
-                        noWrap
+                    <Box
                         component="div"
-                        className="logo"
                         sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}
                     >
-                        Oscar Guzmán
-                    </Typography>
+                        <img src="/LogoOGPDEV2.png" alt="Logo"/>
+                    </Box>
                     <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
+                        <NavLink
+                            style={navLinkStyles}
+                            to={`/`}
+
+                        >
+                            <Button
+                                key="header_menu_education"
+                                onClick={handleCloseNavMenu}
+                                sx={{my: 2, display: 'block'}}
+                                color={location.pathname === "/" ? "secondary" : 'primary'}
+                            >
+                                {translate("header_menu_about_me")}
+                            </Button>
+                        </NavLink>
                         <NavLink
                             style={navLinkStyles}
                             sx={{}}
@@ -103,38 +119,9 @@ const MainHeader = () => {
                                 sx={{my: 2, display: 'block'}}
                                 color={location.pathname === "/portfolio" ? "secondary" : 'primary'}
                             >
-                                {t("header_menu_portfolio")}
+                                {translate("header_menu_portfolio")}
                             </Button>
                         </NavLink>
-
-                        <NavLink
-                            style={navLinkStyles}
-                            to={`/education`}
-
-                        >
-                            <Button
-                                key="header_menu_education"
-                                onClick={handleCloseNavMenu}
-                                sx={{my: 2, display: 'block'}}
-                                color={location.pathname === "/education" ? "secondary" : 'primary'}
-                            >
-                                {t("header_menu_education")}
-                            </Button>
-                        </NavLink>
-                        <NavLink
-                            style={navLinkStyles}
-                            to={`/experience`}
-                        >
-                            <Button
-                                key="header_menu_education"
-                                onClick={handleCloseNavMenu}
-                                sx={{my: 2, display: 'block'}}
-                                color={location.pathname === "/experience" ? "secondary" : 'primary'}
-                            >
-                                {t("header_menu_experience")}                            </Button>
-                        </NavLink>
-
-
                     </Box>
 
                     <Box sx={{flexGrow: 0}}>

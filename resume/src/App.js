@@ -7,30 +7,49 @@ import MainHeader from "./components/MainHeader/MainHeader.js";
 import {Grid} from "@mui/material";
 import {ArrowBackIosNew, ArrowForwardIos} from "@mui/icons-material";
 import IconButton from "@mui/material/IconButton";
-import {Route, Routes} from "react-router-dom";
-import AboutMe from "./pages/AboutMe";
+import {Link, Route, Routes, useLocation} from "react-router-dom";
+import routes from "./routes"
+
 
 function App() {
+    const location = useLocation();
+    const getPrevPage = () => {
+        const currentIndex = routes.findIndex(r => r.path === location.pathname)
+        return currentIndex === 0 ? routes.length - 1 : currentIndex - 1;
+    };
+    const getFollowingPage = () => {
+        const currentIndex = routes.findIndex(r => r.path === location.pathname)
+        return currentIndex === routes.length - 1 ? 0 : currentIndex + 1;
+    };
     return (
         <div className="App">
             <MainHeader/>
             <main className="App-body">
-                <Grid container spacing={1} justifyContent="center"
-                      alignItems="center">
+                <Grid
+                    container spacing={1}
+                    justifyContent="center"
+                    alignItems="center">
                     <Grid item xs={1}>
-                        <IconButton color="primary">
-                            <ArrowBackIosNew/>
-                        </IconButton>
+                        <Link to={routes[getPrevPage()].path}>
+                            <IconButton color="primary">
+                                <ArrowBackIosNew/>
+                            </IconButton>
+                        </Link>
                     </Grid>
-                    <Grid item xs={10}>
+                    <Grid item xs={9}>
                         <Routes>
-                            <Route path="/" element={<AboutMe/>}/>
+                            {routes
+                                ?.map((route) =>
+                                    <Route key={`route${route.path}`} path={route.path} element={<route.component/>}/>)
+                            }
                         </Routes>
                     </Grid>
                     <Grid item xs={1}>
-                        <IconButton color="primary">
-                            <ArrowForwardIos/>
-                        </IconButton>
+                        <Link to={routes[getFollowingPage()].path}>
+                            <IconButton color="primary">
+                                <ArrowForwardIos/>
+                            </IconButton>
+                        </Link>
                     </Grid>
                 </Grid>
 
