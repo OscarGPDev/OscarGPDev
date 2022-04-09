@@ -34,6 +34,10 @@ const AboutMe = () => {
                                 <TableCell>{translation("aboutMe_table_hackerrank")}</TableCell>
                                 <TableCell><Link href="https://www.hackerrank.com/oscarprograb" target="_blank">oscarprograb</Link></TableCell>
                             </TableRow>
+                            <TableRow>
+                                <TableCell>{translation("aboutMe_table_linkedin")}</TableCell>
+                                <TableCell><Link href="https://www.linkedin.com/in/oscargpdev" target="_blank">oscarprograb</Link></TableCell>
+                            </TableRow>
                         </TableBody>
                     </Table>
                 </TableContainer>
