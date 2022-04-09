@@ -75,14 +75,11 @@ const MainHeader = () => {
                                 display: {xs: 'block', md: 'none'},
                             }}
                         >
-                            <MenuItem key="header_menu_portfolio" onClick={handleCloseNavMenu}>
+                            <MenuItem key="header_menu_portfolio" onClick={handleCloseNavMenu} color={location.pathname === "/" ? "secondary" : 'primary'}>
                                 <Typography textAlign="center">{translate("header_menu_portfolio")}</Typography>
                             </MenuItem>
-                            <MenuItem key="header_menu_education" onClick={handleCloseNavMenu}>
-                                <Typography textAlign="center">{translate("header_menu_education")}</Typography>
-                            </MenuItem>
-                            <MenuItem key="header_menu_experience" onClick={handleCloseNavMenu}>
-                                <Typography textAlign="center">{translate("header_menu_experience")}</Typography>
+                            <MenuItem key="header_menu_about_me" onClick={handleCloseNavMenu} color={location.pathname === "/" ? "secondary" : 'primary'}>
+                                <Typography textAlign="center">{translate("header_menu_about_me")}</Typography>
                             </MenuItem>
                         </Menu>
                     </Box>
@@ -99,7 +96,7 @@ const MainHeader = () => {
 
                         >
                             <Button
-                                key="header_menu_education"
+                                key="header_menu_about_me"
                                 onClick={handleCloseNavMenu}
                                 sx={{my: 2, display: 'block'}}
                                 color={location.pathname === "/" ? "secondary" : 'primary'}
