@@ -1,0 +1,14 @@
+{
+  "select_language": "Select a language",
+  "header_menu_portfolio": "Portfolio and stack",
+  "header_menu_about_me": "About me",
+  "header_menu_experience": "Experience",
+  "aboutMe_title": "About me",
+  "aboutMe_body": "I am a proudly graduate from ESCOM IPN, I am a technology enthusiast that is always trying new things, specially if it is about GNU/Linux and free software, I am not married with just using it, but I prefer it over others. I love learning about almost everything, and I also like to share my knowledge with others because teach is like learn it twice, since I was a college student I was a web programmer, and it is one of my favorite development areas because it is actually a way to provide multi platform software. In my free time I really enjoy to listening music, doing workout, playing video games at night, watching anime, movies, etc.",
+  "aboutMe_table_hobbies":"Hobbies",
+  "aboutMe_table_hackerrank":"HackerRank",
+  "aboutMe_table_github":"GitHub",
+  "aboutMe_table_linkedin":"Linkedin",
+  "portfolio_title": "Portfolio",
+  "portfolio_body": "This is my actual portfolio"
+}

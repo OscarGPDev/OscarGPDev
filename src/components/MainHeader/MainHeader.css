@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+.main-header{
+    background-color: #fff;
+}
+.logo{
+    margin:1rem 2rem ;
+    color: #59C9F1;
+    font-family: 'Share Tech', sans-serif;
+    font-size: 30px;
+}
+.nav-menu{
+    margin-right:0;
+    margin-left:auto;
+}
