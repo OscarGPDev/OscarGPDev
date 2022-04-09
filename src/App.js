@@ -26,17 +26,17 @@ function App() {
             <MainHeader/>
             <main className="App-body">
                 <Grid
-                    container spacing={1}
-                    justifyContent="center"
+                    container
+                    justifyContent="space-evenly"
                     alignItems="center">
                     <Grid item xs={1}>
-                        <Link to={routes[getPrevPage()].path}>
-                            <IconButton color="primary">
+                        <Link to={routes[getPrevPage()].path} style={{"margin-left":0}}>
+                            <IconButton color="primary" sx={{marginLeft:0, marginRight:"auto"}}>
                                 <ArrowBackIosNew/>
                             </IconButton>
                         </Link>
                     </Grid>
-                    <Grid item xs={9}>
+                    <Grid item xs={9} md={10}>
                         <Routes>
                             {routes
                                 ?.map((route) =>

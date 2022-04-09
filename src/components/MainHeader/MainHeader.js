@@ -20,7 +20,7 @@ const MainHeader = () => {
     const [anchorElNav, setAnchorElNav] = useState(null);
 
     const location = useLocation();
-    const {t:translate} = useTranslation();
+    const {t: translate} = useTranslation();
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -75,12 +75,15 @@ const MainHeader = () => {
                                 display: {xs: 'block', md: 'none'},
                             }}
                         >
-                            <MenuItem key="header_menu_portfolio" onClick={handleCloseNavMenu} color={location.pathname === "/" ? "secondary" : 'primary'}>
-                                <Typography textAlign="center">{translate("header_menu_portfolio")}</Typography>
-                            </MenuItem>
-                            <MenuItem key="header_menu_about_me" onClick={handleCloseNavMenu} color={location.pathname === "/" ? "secondary" : 'primary'}>
+                            <MenuItem key="header_menu_about_me" onClick={handleCloseNavMenu}
+                                      selected={location.pathname === "/"}>
                                 <Typography textAlign="center">{translate("header_menu_about_me")}</Typography>
                             </MenuItem>
+                            <MenuItem key="header_menu_portfolio" onClick={handleCloseNavMenu}
+                                      selected={location.pathname === "/portfolio"}>
+                                <Typography textAlign="center">{translate("header_menu_portfolio")}</Typography>
+                            </MenuItem>
+
                         </Menu>
                     </Box>
                     <Box
