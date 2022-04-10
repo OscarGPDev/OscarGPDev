@@ -39,7 +39,7 @@ const AboutMe = () => {
                         <TableRow>
                             <TableCell>{translation("aboutMe_table_linkedin")}</TableCell>
                             <TableCell><Link href="https://www.linkedin.com/in/oscargpdev"
-                                             target="_blank">oscarprograb</Link></TableCell>
+                                             target="_blank">OscarGPDev</Link></TableCell>
                         </TableRow>
                     </TableBody>
                 </Table>

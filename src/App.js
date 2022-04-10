@@ -30,7 +30,7 @@ function App() {
                     justifyContent="space-evenly"
                     alignItems="center">
                     <Grid item xs={1}>
-                        <Link to={routes[getPrevPage()].path} style={{"margin-left":0}}>
+                        <Link to={routes[getPrevPage()].path} style={{"marginLeft":0}}>
                             <IconButton color="primary" sx={{marginLeft:0, marginRight:"auto"}}>
                                 <ArrowBackIosNew/>
                             </IconButton>

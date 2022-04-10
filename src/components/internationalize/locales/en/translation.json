@@ -10,5 +10,9 @@
   "aboutMe_table_github":"GitHub",
   "aboutMe_table_linkedin":"Linkedin",
   "portfolio_title": "Portfolio",
-  "portfolio_body": "This is my actual portfolio"
+  "portfolio_body": "This is my actual portfolio",
+  "portfolio_table_project_name": "Project",
+  "portfolio_table_technologies": "Technologies",
+  "portfolio_table_date": "Date",
+  "portfolio_table_description":"Description"
 }

@@ -1,45 +1,71 @@
-import {Card, CardContent, Link, Paper, Table, TableBody, TableCell, TableContainer, TableRow} from "@mui/material";
+import {CardContent, Chip, Paper} from "@mui/material";
 import Typography from "@mui/material/Typography";
 import {useTranslation} from "react-i18next";
-import {CameraIndoor, FitnessCenter, MusicNote, VideogameAsset} from "@mui/icons-material";
+import DataTable from "../components/DataTable";
+
+const DrawTechnologies = (technologies) => {
+    const getRandomColor = () => {
+        let result = "";
+        switch (Math.floor(Math.random() * (5))) {
+            case 0:
+                result = "default";
+                break;
+            case 1:
+                result = "primary";
+                break;
+            case 2:
+                result = "secondary";
+                break;
+            case 3:
+                result = "info";
+                break;
+            case 4:
+                result = "success";
+                break;
+            default:
+                result = "warning";
+                break;
+        }
+        return result;
+    };
+    return (<div>{technologies.map((technology) => {
+        return (<Chip key={`chip-${technology}`} color={getRandomColor()} size="small" label={
+                technology
+            }/>
+        )
+    })}</div>);
+}
 
 const Portfolio = () => {
     const {t: translation} = useTranslation();
-    return (
-        <Card variant="outlined" sx={{height: {xs:"100%", md:"auto", lg:"70vh"}}}>
-            <CardContent sx={{padding: "2rem"}}>
-                <Typography variant="h3" gutterBottom>
-                    {translation('portfolio_title')}
-                </Typography>
-                <Typography variant="body1" gutterBottom align="justify">
-                    {translation('portfolio_body')}
-                </Typography>
-                <TableContainer component={Paper} sx={{ width: {
-                    xs: "100%",
-                    md: "40vw",
-                    lg: "20vw",
-
-                }, }}>
-                    <Table aria-label="simple table">
-                        <TableBody>
-                            <TableRow>
-                                <TableCell>{translation("aboutMe_table_hobbies")}</TableCell>
-                                <TableCell><VideogameAsset/><MusicNote/><CameraIndoor/><FitnessCenter/></TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell>{translation("aboutMe_table_github")}</TableCell>
-                                <TableCell><Link href="https://github.com/OscarGPDev" target="_blank">OscarGPDev</Link></TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell>{translation("aboutMe_table_hackerrank")}</TableCell>
-                                <TableCell><Link href="https://www.hackerrank.com/oscarprograb" target="_blank">oscarprograb</Link></TableCell>
-                            </TableRow>
-                        </TableBody>
-                    </Table>
-                </TableContainer>
-
-            </CardContent>
-        </Card>
-    );
+    const headers = [{
+        id: 'project', title: translation("portfolio_table_project_name"), dataSource: 'projectName',
+    }, {
+        id: 'technologies', title: translation("portfolio_table_technologies"), dataSource: 'technologies',
+        drawFunction: (rowElement) => DrawTechnologies(rowElement.technologies)
+    }, {
+        id: 'date', title: translation("portfolio_table_date"), dataSource: 'date',
+    }, {
+        id: 'description', title: translation("portfolio_table_description"), dataSource: 'description',
+    }];
+    const portfolioData = [
+        {
+            projectName: '',
+            date: '',
+            description: '',
+            technologies: ['java','python']
+        }
+    ];
+    return (<Paper elevation={0}>
+        <CardContent sx={{padding: "2rem"}}>
+            <Typography variant="h3" gutterBottom>
+                {translation('portfolio_title')}
+            </Typography>
+            <Typography variant="body1" gutterBottom align="justify">
+                {translation('portfolio_body')}
+            </Typography>
+            <DataTable data={portfolioData} headers={headers}/>
+        </CardContent>
+    </Paper>);
 };
 export default Portfolio;
