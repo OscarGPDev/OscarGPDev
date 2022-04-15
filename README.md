@@ -27,7 +27,7 @@ As a programmer I know some languages and frameworks as you can see in the follo
   "javascript": [
     "Node.js with express",
     "React",
-    "Currently learning Angular and Electron"
+    "Currently learning Angular, Vue.js and Electron"
   ],
   "java": "Currently I made java applications in college but with old versions, actually I have made Android apps with java but it was quite long ago"
 }
