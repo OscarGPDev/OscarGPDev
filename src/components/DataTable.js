@@ -20,7 +20,7 @@ const compare = (a, b, asc) => {
     return 0;
 };
 
-const DataTable = ({headers, data, filters}) => {
+const DataTable = ({headers, data, filters, sx}) => {
     const [sortingBy, setSortingBy] = useState({id: null, ascending: false, default: true});
     const defaultSortingHeader = headers.find((header) => header.orderBy);
     let tableData = data;
@@ -45,12 +45,15 @@ const DataTable = ({headers, data, filters}) => {
     }
     return (<TableContainer component={Paper}>
         {filters?.map(filter => <filter/>)}
-        <Table aria-label="Portfolio table">
+        <Table aria-label="Portfolio table" sx={sx}>
             <TableHead>
                 <TableRow>
                     {headers?.map((header) => {
-                        return (<TableCell key={`header-${header.id}`}
-                                           onClick={() => onClickSorting(header)}>{header.title}
+                        return (<TableCell
+                            key={`header-${header.id}`}
+                            onClick={() => onClickSorting(header)}
+                            sx={header.sx}
+                        >{header.title}
                             {(
                                     (header.id === sortingBy.id) || (sortingBy.default && header.orderBy)
                                 ) &&
@@ -70,7 +73,7 @@ const DataTable = ({headers, data, filters}) => {
             <TableBody>
                 {tableData?.map((row, rowIndex) => <TableRow key={`data-row-${rowIndex}`}>
                     {headers?.map((header, index) => (
-                        <TableCell key={`data-cell-${index}-${header.id}`}>
+                        <TableCell key={`data-cell-${index}-${header.id}`} sx={header.sxBody}>
                             {header.drawFunction !== undefined ?
                                 header.drawFunction(row)
                                 : row[header.dataSource]}

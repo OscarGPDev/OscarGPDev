@@ -2,6 +2,7 @@
   "select_language": "Escoge un idioma",
   "header_menu_portfolio": "Portafolio y tecnologías",
   "header_menu_about_me": "Sobre mi",
+  "header_menu_experience": "Experiencia",
   "aboutMe_title": "Acerca de mi",
   "aboutMe_body": "Soy orgullosamente egresado de ESCOM IPN, soy un entusiasta de la tecnología que siempre está buscando probar cosas nuevas, especialmente si se trata de GNU/Linux y software libre, y aunque no tengo problema usando otros sistema. Me encanta aprender de casi todo, y también me gusta compartir mis conocimientos con los demás porque enseñar es como aprender dos veces, desde que era estudiante universitario era programador web, y es una de mis áreas favoritas de desarrollo porque en realidad es una forma de proporcionar software multiplataforma. En mi tiempo libre disfruto mucho escuchando música, haciendo ejercicio, jugando videojuegos por la noche, viendo anime, películas, etc.",
   "aboutMe_table_hobbies": "Pasatiempos",
@@ -21,5 +22,15 @@
   "portfolio_table_pokedex_description": "Es una práctica para Launch X, hecha con JavaScript puro, consume una API.",
   "portfolio_table_vaccines_description": "Hice una página HTML para Launch X, el propósito fue hacer una un sitio web a partir de una imagen que nos dieron como práctica de CSS.",
   "portfolio_table_delidelicake_description": "Como parte del programa Launch X, hice este sitio como práctica de HTML, use Bootstrap.",
-  "portfolio_table_museummax_description": "Este proyecto fue hecho para conseguir la licenciatura en Ing. en Sistemas Computacionales, construimos una SPA con React como frontend, para el backend usamos Django con un framework REST, usamos tanto el ORM de Django, pero también hicimos Stored Procedures para mejorar el rendimiento, para evitar almacenar en el disco duro del servidor decidimos usar Firebase Storage para mantener las imágenes y las miniaturas."
+  "portfolio_table_museummax_description": "Este proyecto fue hecho para conseguir la licenciatura en Ing. en Sistemas Computacionales, construimos una SPA con React como frontend, para el backend usamos Django con un framework REST, usamos tanto el ORM de Django, pero también hicimos Stored Procedures para mejorar el rendimiento, para evitar almacenar en el disco duro del servidor decidimos usar Firebase Storage para mantener las imágenes y las miniaturas.",
+  "experience_title": "Experiencia",
+  "experience_body": "Es esta página te muestro mi experiencia actual.",
+  "experience_table_company": "Empresa",
+  "experience_table_technologies": "Tecnologías",
+  "experience_table_period": "Periodo",
+  "experience_table_description": "Descripción",
+  "experience_others": "Otros",
+  "experience_acm_icpc_body": "Participé dos veces en el ACM ICPC para poner a prueba mis habilidades durante mi estadía en la universidad, ambas veces quedé cercano a los primeros 100 en la etapa local.",
+  "experience_class_leader_title": "Líder de la clase de Algoritmia y Programación Estructurada",
+  "experience_class_leader_body": "Fui escogido como líder para esta clase, para coordinar el proyecto de la materia entre 3 grupos, fui uno de los coordinadores principales, mi tarea era administrar las tareas entre los miembros de la clase, la meta que se me puso fue que nadie se quedara sin tareas para que de esta forma pudieran ser evaluados, fue un éxito."
 }

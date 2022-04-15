@@ -83,6 +83,10 @@ const MainHeader = () => {
                                       selected={location.pathname === "/portfolio"}>
                                 <Typography textAlign="center">{translate("header_menu_portfolio")}</Typography>
                             </MenuItem>
+                            <MenuItem key="header_menu_experience" onClick={handleCloseNavMenu}
+                                      selected={location.pathname === "/experience"}>
+                                <Typography textAlign="center">{translate("header_menu_experience")}</Typography>
+                            </MenuItem>
 
                         </Menu>
                     </Box>
@@ -109,7 +113,6 @@ const MainHeader = () => {
                         </NavLink>
                         <NavLink
                             style={navLinkStyles}
-                            sx={{}}
                             to={`/portfolio`}
 
                         >
@@ -120,6 +123,20 @@ const MainHeader = () => {
                                 color={location.pathname === "/portfolio" ? "secondary" : 'primary'}
                             >
                                 {translate("header_menu_portfolio")}
+                            </Button>
+                        </NavLink>
+                        <NavLink
+                            style={navLinkStyles}
+                            to={`/experience`}
+
+                        >
+                            <Button
+                                key="header_menu_experience"
+                                onClick={handleCloseNavMenu}
+                                sx={{my: 2, display: 'block'}}
+                                color={location.pathname === "/experience" ? "secondary" : 'primary'}
+                            >
+                                {translate("header_menu_experience")}
                             </Button>
                         </NavLink>
                     </Box>
