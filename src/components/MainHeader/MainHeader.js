@@ -75,19 +75,36 @@ const MainHeader = () => {
                                 display: {xs: 'block', md: 'none'},
                             }}
                         >
-                            <MenuItem key="header_menu_about_me" onClick={handleCloseNavMenu}
-                                      selected={location.pathname === "/"}>
-                                <Typography textAlign="center">{translate("header_menu_about_me")}</Typography>
-                            </MenuItem>
-                            <MenuItem key="header_menu_portfolio" onClick={handleCloseNavMenu}
-                                      selected={location.pathname === "/portfolio"}>
-                                <Typography textAlign="center">{translate("header_menu_portfolio")}</Typography>
-                            </MenuItem>
-                            <MenuItem key="header_menu_experience" onClick={handleCloseNavMenu}
-                                      selected={location.pathname === "/experience"}>
-                                <Typography textAlign="center">{translate("header_menu_experience")}</Typography>
-                            </MenuItem>
+                            <NavLink
+                                style={{textDecoration: "none",color:"#1976d2"}}
+                                to={`/`}
 
+                            >
+                                <MenuItem key="header_menu_about_me" onClick={handleCloseNavMenu}
+                                          selected={location.pathname === "/"}>
+                                    <Typography textAlign="center">{translate("header_menu_about_me")}</Typography>
+                                </MenuItem>
+                            </NavLink>
+                            <NavLink
+                                style={{textDecoration: "none",color:"#1976d2"}}
+                                to={`/portfolio`}
+
+                            >
+                                <MenuItem key="header_menu_portfolio" onClick={handleCloseNavMenu}
+                                          selected={location.pathname === "/portfolio"}>
+                                    <Typography textAlign="center">{translate("header_menu_portfolio")}</Typography>
+                                </MenuItem>
+                            </NavLink>
+                            <NavLink
+                                style={{textDecoration: "none",color:"#1976d2"}}
+                                to={`/experience`}
+
+                            >
+                                <MenuItem key="header_menu_experience" onClick={handleCloseNavMenu}
+                                          selected={location.pathname === "/experience"}>
+                                    <Typography textAlign="center">{translate("header_menu_experience")}</Typography>
+                                </MenuItem>
+                            </NavLink>
                         </Menu>
                     </Box>
                     <Box
