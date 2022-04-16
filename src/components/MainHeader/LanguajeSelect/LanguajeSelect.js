@@ -1,24 +1,29 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import i18next from "i18next";
 import {FormControl, Select} from "@mui/material";
 import MenuItem from "@mui/material/MenuItem";
 
 const languageMap = {
-    'en': {label: "EN", active: true},
-    'es-MX': {label: "ES", active: false}
+    'en': {label: "EN"},
+    'es-MX': {label: "ES"}
 };
 const getInitialLanguage = () => {
     const currentLanguage = localStorage.getItem("i18nextLng");
     if (currentLanguage && currentLanguage.includes("es")) {
         return "es-MX";
     } else {
-        return "en"
+        return "en";
     }
+
 };
+
 
 const LanguageSelect = () => {
 
     const [selected, setSelected] = useState(getInitialLanguage());
+    useEffect(()=>{
+        i18next.changeLanguage(getInitialLanguage());
+    },[]);
     const handleChange = (event) => {
         i18next.changeLanguage(event.target.value);
         setSelected(event.target.value)

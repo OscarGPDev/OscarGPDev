@@ -6,7 +6,7 @@ import translationEN from "./locales/en/translation.json";
 import translationES from "./locales/es/translation.json";
 
 const fallbackLng = ["en"];
-const availableLanguages = ["en", "es"];
+const availableLanguages = ["en", "es-MX"];
 
 const resources = {
     en: {
