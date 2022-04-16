@@ -55,14 +55,29 @@ const Experience = () => {
                         xs: "100%",
                         md: "40vw",
                         lg: "40vw",
+                    }
+                }}>
+                    <Grid item sx={{marginLeft: "20px"}}>
+                        <Typography variant="h6">Launch X
+                            <Typography variant="overline" sx={{marginLeft: "20px"}}>2022</Typography>
+                        </Typography>
+                        <Typography variant="body1" align="justify">{translate("experience_launch_x_body")}</Typography>
+                    </Grid>
+                </Grid>
+                <Grid container direction="column" sx={{
+                    borderLeft: "5px solid #1976d2", width: {
+                        xs: "100%",
+                        md: "40vw",
+                        lg: "40vw",
                     },
+                    marginY: "50px"
                 }}>
                     <Grid item sx={{marginLeft: "20px"}}>
                         <Typography variant="h6">ACM ICPC
-                            <Typography variant="overline">04/2018</Typography>
+                            <Typography variant="overline" sx={{marginLeft: "20px"}}>05/2019</Typography>
                         </Typography>
                         <Typography variant="h6">ACM ICPC
-                            <Typography variant="overline">05/2019</Typography>
+                            <Typography variant="overline" sx={{marginLeft: "20px"}}>04/2018</Typography>
                         </Typography>
                         <Typography variant="body1" align="justify">{translate("experience_acm_icpc_body")}</Typography>
                     </Grid>

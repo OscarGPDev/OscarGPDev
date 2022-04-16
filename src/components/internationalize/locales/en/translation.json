@@ -10,7 +10,7 @@
   "aboutMe_table_github": "GitHub",
   "aboutMe_table_linkedin": "Linkedin",
   "portfolio_title": "Portfolio",
-  "portfolio_body": "This is my actual portfolio",
+  "portfolio_body": "This is my actual portfolio, click the headers in the table if you want to sort the table, and use the links if you want to visit one of the following projects.",
   "portfolio_table_project_name": "Project",
   "portfolio_table_technologies": "Technologies",
   "portfolio_table_date": "Date (MM/YYYY)",
@@ -30,6 +30,7 @@
   "experience_table_period": "Period",
   "experience_table_description": "Description",
   "experience_others": "Others",
+  "experience_launch_x_body": "I took the Launch X program to improve my skills and get more technologies in my stack.",
   "experience_acm_icpc_body": "I participated two times in the ACM ICPC to test my skills when I was in college, both times I was near the first 100 at local stage.",
   "experience_class_leader_title": "Algorithms and Structured Programming Class Leader",
   "experience_class_leader_body": "I was chosen as leader for this class, the class project was given between 3 class groups, I was one of the main coordinators, my main job was to manage the task between the class members, the goal that was given to me as evaluation was that there wasn't anyone without task, and it was a success."
