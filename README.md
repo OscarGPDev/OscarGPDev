@@ -27,7 +27,7 @@ As a programmer I know some languages and frameworks as you can see in the follo
   "javascript": [
     "Node.js with express",
     "React",
-    "Currently learning Angular and Electron"
+    "Currently learning Angular, Vue.js and Electron"
   ],
   "java": "Currently I made java applications in college but with old versions, actually I have made Android apps with java but it was quite long ago"
 }
@@ -42,10 +42,11 @@ I'm kind, a nice dude I think. I know that as a part of a team, or even society,
 
 ### What about languages?
 As I said before, I like self learning, recently I started to learn languages.
-. English: My principal skills became from reading(I'm a docs guy) and music, **BUT** I'm currently learning in CENLEX IPN in order to achive the B2 in MCER metrics.
-. Russian: I'm currently learning Russian via Duolingo, I'm in Diamond league :gem: and once I finish the 4 section I would like to learn Japanese too.
-. Spanish: I'm mexican, it's my mother language.
+- English: My principal skills became from reading(I'm a docs guy) and music, **BUT** I'm currently learning in CENLEX IPN in order to achive the B2 in MCER metrics.
+- Russian: I'm currently learning Russian via Duolingo, I'm in Diamond league :gem: and once I finish the 4 section I would like to learn Japanese too.
+- Spanish: I'm mexican, it's my mother language.
 
 ## Social
 I'm in [LinkedIn](https://www.linkedin.com/in/oscargpdev)
-Shortly I will try be back on [my FB page](https://www.facebook.com/La-cueva-de-Wolf-2stres-2167407859994083)
+
+Shortly I will try to be back on [my FB page](https://www.facebook.com/La-cueva-de-Wolf-2stres-2167407859994083)
