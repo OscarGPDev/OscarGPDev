@@ -1,8 +1,8 @@
 import {Chip, Link} from "@mui/material";
 import {Language} from "@mui/icons-material";
 
-const LinksDrawer = (links) => {
-    return (<div>{links.map((link) => {
+const LinksDrawer = ({links}) => {
+    return (<div>{links?.map((link) => {
             return (<Chip
                 key={`chip-${link.name}`}
                 size="small"
