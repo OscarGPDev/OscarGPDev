@@ -19,7 +19,9 @@ const compare = (a, b, asc) => {
     }
     return 0;
 };
-
+/*
+* This component was made as base for future developments
+* */
 const DataTable = ({headers, data, filters, sx}) => {
     const [sortingBy, setSortingBy] = useState({id: null, ascending: false, default: true});
     const defaultSortingHeader = headers.find((header) => header.orderBy);

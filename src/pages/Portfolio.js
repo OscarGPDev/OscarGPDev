@@ -1,55 +1,10 @@
-import {Chip, Fade, Link, Paper} from "@mui/material";
+import {Fade, Paper} from "@mui/material";
 import Typography from "@mui/material/Typography";
 import {useTranslation} from "react-i18next";
 import DataTable from "../components/DataTable";
-import {Language} from "@mui/icons-material";
+import TagsDrawer from "../components/MainHeader/TagsDrawer";
+import LinksDrawer from "../components/LinksDrawer";
 
-const DrawTechnologies = (technologies) => {
-    const getRandomColor = () => {
-        let result;
-        switch (Math.floor(Math.random() * (5))) {
-            case 0:
-                result = "default";
-                break;
-            case 1:
-                result = "primary";
-                break;
-            case 2:
-                result = "secondary";
-                break;
-            case 3:
-                result = "info";
-                break;
-            case 4:
-                result = "success";
-                break;
-            default:
-                result = "warning";
-                break;
-        }
-        return result;
-    };
-    return (<div>{technologies.map((technology) => {
-        return (<Chip key={`chip-${technology}`} color={getRandomColor()} size="small" label={
-                technology
-            }/>
-        )
-    })}</div>);
-}
-const DrawLinks = (links) => {
-    return (<div>{links.map((link) => {
-            return (<Chip
-                key={`chip-${link.name}`}
-                size="small"
-                label={<Link
-                    key={`link-${link.name}`}
-                    target="_blank"
-                    href={link.link}>{link.name}</Link>}
-                icon={<Language/>}/>)
-        }
-    )
-    }</div>);
-}
 
 const Portfolio = () => {
     const {t: translation} = useTranslation();
@@ -57,12 +12,12 @@ const Portfolio = () => {
         id: 'project', title: translation("portfolio_table_project_name"), dataSource: 'projectName',
     }, {
         id: 'technologies', title: translation("portfolio_table_technologies"), dataSource: 'technologies',
-        drawFunction: (rowElement) => DrawTechnologies(rowElement.technologies)
+        drawFunction: (rowElement) => (<TagsDrawer data={rowElement.technologies}/>)
     }, {
         id: 'date', title: translation("portfolio_table_date"), dataSource: 'date', orderBy: true, ascending: false
     }, {
         id: 'links', title: translation("portfolio_table_links"), dataSource: 'link',
-        drawFunction: (rowElement) => DrawLinks(rowElement.links)
+        drawFunction: (rowElement) => <LinksDrawer links={rowElement.links}/>
     }, {
         id: 'description', title: translation("portfolio_table_description"), dataSource: 'description',
         sx: {minWidth: "300px"},

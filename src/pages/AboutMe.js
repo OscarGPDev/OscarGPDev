@@ -7,7 +7,7 @@ const AboutMe = () => {
     const {t: translation} = useTranslation();
     return (
         <Fade in timeout={2000}>
-            <Paper elevation={0} sx={{height: {xs: "90vh", md: "auto", lg: "70vh", overflowY: {xs: "scroll"}}}}>
+            <Paper elevation={0}>
                 <Typography variant="h3" gutterBottom>
                     {translation('aboutMe_title')}
                 </Typography>
