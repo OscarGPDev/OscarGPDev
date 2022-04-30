@@ -55,7 +55,7 @@ const AboutMe = () => {
                     width: {
                         xs: "100%",
                         md: "40vw",
-                        lg: "20vw",
+                        lg: "40vw",
                     },
                 }}>
                     <Table aria-label="simple table">
