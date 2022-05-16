@@ -73,6 +73,22 @@ const Experience = () => {
                     <Grid item sx={{marginLeft: "20px"}}>
                         <Typography variant="h6">
                             <Typography variant="overline" sx={{marginRight: "20px"}}>2022</Typography>
+                            {translate("experience_hack_the_ocean_title")}
+                        </Typography>
+                        <Typography variant="body1" align="justify">{translate("experience_hack_the_ocean_body")}</Typography>
+                    </Grid>
+                </Grid>
+                <Grid container direction="column" sx={{
+                    borderLeft: "5px solid #1976d2", width: {
+                        xs: "100%",
+                        md: "40vw",
+                        lg: "40vw",
+                    },
+                    marginY: "50px"
+                }}>
+                    <Grid item sx={{marginLeft: "20px"}}>
+                        <Typography variant="h6">
+                            <Typography variant="overline" sx={{marginRight: "20px"}}>2022</Typography>
                             Launch X
                         </Typography>
                         <Typography variant="body1" align="justify">{translate("experience_launch_x_body")}</Typography>
