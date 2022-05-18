@@ -49,4 +49,3 @@ As I said before, I like self learning, recently I started to learn languages.
 ## Social
 I'm in [LinkedIn](https://www.linkedin.com/in/oscargpdev)
 
-Shortly I will try to be back on [my FB page](https://www.facebook.com/La-cueva-de-Wolf-2stres-2167407859994083)
