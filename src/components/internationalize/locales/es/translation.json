@@ -23,6 +23,7 @@
   "portfolio_table_links": "Enlaces",
   "portfolio_table_link_to_site": "Sitio",
   "portfolio_table_description": "Descipción",
+  "portfolio_table_kelpme_description": "Es el proyecto que hice para el hackatón Hack the Ocean, fui líder de equipo y trabaje principalmente en el backend, pero también ayude en tareas del frontend, estoy orgulloso de que terminamos todas las tareas que consideramos desde el inicio del proyecto.",
   "portfolio_table_oscargpdev_description": "Es la Single-Page Application que estas usando, esta hecha con React y MUI.",
   "portfolio_table_delidelicake_vue_description": "Es una práctica de Vue.js que hice para Launch X, esta vez no use Bootstrap.",
   "portfolio_table_pokedex_description": "Es una práctica para Launch X, hecha con JavaScript puro, consume una API.",

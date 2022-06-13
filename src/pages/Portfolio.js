@@ -27,6 +27,13 @@ const Portfolio = () => {
     }];
     const portfolioData = [
         {
+            projectName: 'Kelp me!',
+            date: '05/2022',
+            description: translation("portfolio_table_kelpme_description"),
+            technologies: ['Vue.js', 'JavaScript', 'Express', 'Prisma'],
+            links: [{name: "GitHub", link: 'https://github.com/OscarGPDev/Kelpme'}]
+        },
+        {
             projectName: 'OscarGPDev',
             date: '04/2022',
             description: translation("portfolio_table_oscargpdev_description"),
