@@ -1,15 +1,32 @@
-import {Chip, Fade, Grid, Link, Paper, Table, TableBody, TableCell, TableContainer, TableRow} from "@mui/material";
+import {
+    Chip,
+    Fade,
+    Grid,
+    Link,
+    Paper,
+    Table,
+    TableBody,
+    TableCell,
+    TableContainer,
+    TableHead,
+    TableRow
+} from "@mui/material";
 import Typography from "@mui/material/Typography";
 import {useTranslation} from "react-i18next";
 import {CameraIndoor, FitnessCenter, MusicNote, VideogameAsset} from "@mui/icons-material";
+//import Background from "/wallhaven-p822gp.jpg"
 
 const AboutMe = () => {
     const {t: translation} = useTranslation();
     return (
         <Fade in timeout={2000}>
             <Paper elevation={0}>
-                <Grid container>
-                    <Grid item xs={12} lg={8}>
+                <Grid container
+                      sx={{maxWidth: {lg: "80%"}, marginX: "auto",}}
+                      direction="row"
+                      justifyContent="center"
+                      alignItems="center">
+                    <Grid item xs={12} lg={5}>
                         <Typography variant="h3" gutterBottom>
                             {translation('aboutMe_title')}
                         </Typography>
@@ -17,7 +34,7 @@ const AboutMe = () => {
                             {translation('aboutMe_body')}
                         </Typography>
                     </Grid>
-                    <Grid item xs={12} lg={4}>
+                    <Grid item xs={12} lg={5}>
                         <TableContainer component={Paper} sx={{
                             width: {
                                 xs: "100%",
@@ -56,9 +73,12 @@ const AboutMe = () => {
                 </Grid>
 
 
-
-                <Grid container sx={{marginTop:"10vh"}}>
-                    <Grid item xs={12} lg={8}>
+                <Grid
+                    container
+                    sx={{marginTop: "10vh", maxWidth: {lg: "80%"}, marginX: "auto",}}
+                    justifyContent="center"
+                    alignItems="center">
+                    <Grid item xs={12} lg={5}>
                         <Typography variant="h3" gutterBottom>
                             {translation('aboutMe_stack_title')}
                         </Typography>
@@ -66,7 +86,7 @@ const AboutMe = () => {
                             {translation('aboutMe_stack_body')}
                         </Typography>
                     </Grid>
-                    <Grid item xs={12} lg={4}>
+                    <Grid item xs={12} lg={5}>
                         <TableContainer component={Paper} sx={{
                             width: {
                                 xs: "100%",
@@ -82,21 +102,86 @@ const AboutMe = () => {
                                     <TableRow>
                                         <TableCell>{translation("aboutMe_table_programing_languages")}</TableCell>
                                         <TableCell>
-                                            <Chip label=".NET Framework/.NET Core"
-                                                  sx={{color: "white", backgroundColor: "#502CD3"}}/>
-                                            <Chip label="Python" sx={{color: "white", backgroundColor: "#3FBF3F"}}/>
-                                            <Chip label="Java" sx={{color: "white", backgroundColor: "#E76F00"}}/>
-                                            <Chip label="JavaScript/TypeScript"
-                                                  sx={{color: "black", backgroundColor: "#EAD41C"}}/>
+                                            <Table aria-label="simple table">
+                                                <TableHead>
+                                                    <TableRow>
+                                                    </TableRow>
+                                                </TableHead>
+                                                <TableBody>
+                                                    <TableRow>
+                                                        <TableCell sx={{
+                                                            color: "black",
+                                                            background: "linear-gradient(90deg, rgba(80,44,211,1) 0%, rgba(80,44,211,1) 80%, rgba(0,0,0,0) 80%) "
+                                                        }}>
+                                                            .NET Framework/.NET Core -
+                                                            2 {translation("years_experience")}.
+                                                        </TableCell>
+                                                    </TableRow>
+                                                    <TableRow>
+                                                        <TableCell sx={{
+                                                            color: "black",
+                                                            background: "linear-gradient(90deg, rgba(63,191,63,1) 0%, rgba(63,191,63,1) 40%, rgba(0,0,0,0) 40%) "
+                                                        }}>
+                                                            Python - 1 {translation("year_experience")}.
+                                                        </TableCell>
+                                                    </TableRow>
+                                                    <TableRow>
+                                                        <TableCell sx={{
+                                                            color: "black",
+                                                            background: "linear-gradient(90deg, rgba(231,111,0,1) 0%, rgba(231,111,0,1) 40%, rgba(0,0,0,0) 40%) "
+                                                        }}>
+                                                            Java - 1 {translation("year_experience")}.
+                                                        </TableCell>
+                                                    </TableRow>
+                                                    <TableRow>
+                                                        <TableCell sx={{
+                                                            color: "black",
+                                                            background: "linear-gradient(90deg, rgba(234,212,28,1) 0%, rgba(234,212,28,1) 100%, rgba(0,0,0,0) 100%) "
+                                                        }}>
+                                                            JavaScript/TypeScript 3 - {translation("years_experience")}.
+                                                        </TableCell>
+                                                    </TableRow>
+                                                </TableBody>
+                                            </Table>
                                         </TableCell>
                                     </TableRow>
                                     <TableRow>
                                         <TableCell>{translation("aboutMe_table_frontend_technologies")}</TableCell>
                                         <TableCell>
-                                            <Chip label="Bootstrap"
-                                                  sx={{color: "white", backgroundColor: "#502CD3"}}/>
-                                            <Chip label="React" sx={{color: "white", backgroundColor: "#5ED3F3"}}/>
-                                            <Chip label="Vue.js" sx={{color: "white", backgroundColor: "#3FB27F"}}/>
+                                            <Table aria-label="simple table">
+                                                <TableHead>
+                                                    <TableRow>
+                                                    </TableRow>
+                                                </TableHead>
+                                                <TableBody>
+                                                    <TableRow>
+                                                        <TableCell sx={{
+                                                            color: "black",
+                                                            background: "linear-gradient(90deg, rgba(80,44,211,1) 0%, rgba(80,44,211,1) 100%, rgba(0,0,0,0) 100%) "
+                                                        }}>
+                                                            Bootstrap -
+                                                            2 {translation("years_experience")}.
+                                                        </TableCell>
+                                                    </TableRow>
+                                                    <TableRow>
+                                                        <TableCell sx={{
+                                                            color: "black",
+                                                            background: "linear-gradient(90deg, rgba(94,211,243,1) 0%, rgba(94,211,243,1) 100%, rgba(0,0,0,0) 100%) "
+                                                        }}>
+                                                            React - 2 {translation("year_experience")}.
+                                                        </TableCell>
+                                                    </TableRow>
+                                                    <TableRow>
+                                                        <TableCell sx={{
+                                                            color: "black",
+                                                            background: "linear-gradient(90deg, rgba(63,178,127,1) 0%, rgba(63,178,127,1) 25%, rgba(0,0,0,0) 25%) "
+                                                        }}>
+                                                            Vue.js - 0.5 {translation("years_experience")}.
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                </TableBody>
+                                            </Table>
                                         </TableCell>
                                     </TableRow>
                                     <TableRow>
@@ -113,6 +198,7 @@ const AboutMe = () => {
                                         <TableCell>{translation("aboutMe_table_cloud_technologies")}</TableCell>
                                         <TableCell>
                                             <Chip label="Firebase" sx={{color: "black", backgroundColor: "#F2C12A"}}/>
+                                            <Chip label="Azure" sx={{color: "black", backgroundColor: "rgba(94,211,243,1)"}}/>
                                         </TableCell>
                                     </TableRow>
                                 </TableBody>

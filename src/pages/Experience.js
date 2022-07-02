@@ -72,6 +72,24 @@ const Experience = () => {
                 }}>
                     <Grid item sx={{marginLeft: "20px"}}>
                         <Typography variant="h6">
+                            {translate("experience_certifications")}
+                        </Typography>
+                        <Typography variant="body1" align="justify">
+                            <Typography variant="overline" sx={{marginRight: "20px"}}>06/2022</Typography>
+                            {translate("experience_certifications_azure")}</Typography>
+                    </Grid>
+                </Grid>
+                <Grid container direction="column" sx={{
+                    borderLeft: "5px solid #1976d2", width: {
+                        xs: "100%",
+                        md: "40vw",
+                        lg: "40vw",
+                    },
+                    marginY: "50px"
+
+                }}>
+                    <Grid item sx={{marginLeft: "20px"}}>
+                        <Typography variant="h6">
                             <Typography variant="overline" sx={{marginRight: "20px"}}>2022</Typography>
                             {translate("experience_hack_the_ocean_title")}
                         </Typography>
