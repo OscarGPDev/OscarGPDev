@@ -157,18 +157,18 @@ const AboutMe = () => {
                                                     <TableRow>
                                                         <TableCell sx={{
                                                             color: "black",
-                                                            background: "linear-gradient(90deg, rgba(80,44,211,0.7) 0%, rgba(80,44,211,0.7) 100%, rgba(0,0,0,0) 100%) "
+                                                            background: "linear-gradient(90deg, rgba(94,211,243,1) 0%, rgba(94,211,243,1) 100%, rgba(0,0,0,0) 100%) "
                                                         }}>
-                                                            Bootstrap -
-                                                            2 {translation("years_experience")}.
+                                                            React - 2 {translation("year_experience")}.
                                                         </TableCell>
                                                     </TableRow>
                                                     <TableRow>
                                                         <TableCell sx={{
                                                             color: "black",
-                                                            background: "linear-gradient(90deg, rgba(94,211,243,1) 0%, rgba(94,211,243,1) 100%, rgba(0,0,0,0) 100%) "
+                                                            background: "linear-gradient(90deg, rgba(80,44,211,0.7) 0%, rgba(80,44,211,0.7) 100%, rgba(0,0,0,0) 100%) "
                                                         }}>
-                                                            React - 2 {translation("year_experience")}.
+                                                            Bootstrap -
+                                                            2 {translation("years_experience")}.
                                                         </TableCell>
                                                     </TableRow>
                                                     <TableRow>
