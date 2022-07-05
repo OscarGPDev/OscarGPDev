@@ -90,8 +90,8 @@ const AboutMe = () => {
                         <TableContainer component={Paper} sx={{
                             width: {
                                 xs: "100%",
-                                md: "30vw",
-                                lg: "30vw",
+                                md: "40vw",
+                                lg: "20vw",
                             },
                             marginX: {
                                 lg: "20px",
@@ -102,7 +102,7 @@ const AboutMe = () => {
                                     <TableRow>
                                         <TableCell>{translation("aboutMe_table_programing_languages")}</TableCell>
                                         <TableCell>
-                                            <Table aria-label="simple table">
+                                            <Table aria-label="simple table" sx={{width: "100%"}}>
                                                 <TableHead>
                                                     <TableRow>
                                                     </TableRow>
@@ -111,7 +111,7 @@ const AboutMe = () => {
                                                     <TableRow>
                                                         <TableCell sx={{
                                                             color: "black",
-                                                            background: "linear-gradient(90deg, rgba(80,44,211,1) 0%, rgba(80,44,211,1) 80%, rgba(0,0,0,0) 80%) "
+                                                            background: "linear-gradient(90deg, rgba(80,44,211,0.7) 0%, rgba(80,44,211,0.7) 80%, rgba(0,0,0,0) 80%) "
                                                         }}>
                                                             .NET Framework/.NET Core -
                                                             2 {translation("years_experience")}.
@@ -148,7 +148,7 @@ const AboutMe = () => {
                                     <TableRow>
                                         <TableCell>{translation("aboutMe_table_frontend_technologies")}</TableCell>
                                         <TableCell>
-                                            <Table aria-label="simple table">
+                                            <Table aria-label="simple table" sx={{width: "100%"}}>
                                                 <TableHead>
                                                     <TableRow>
                                                     </TableRow>
@@ -157,7 +157,7 @@ const AboutMe = () => {
                                                     <TableRow>
                                                         <TableCell sx={{
                                                             color: "black",
-                                                            background: "linear-gradient(90deg, rgba(80,44,211,1) 0%, rgba(80,44,211,1) 100%, rgba(0,0,0,0) 100%) "
+                                                            background: "linear-gradient(90deg, rgba(80,44,211,0.7) 0%, rgba(80,44,211,0.7) 100%, rgba(0,0,0,0) 100%) "
                                                         }}>
                                                             Bootstrap -
                                                             2 {translation("years_experience")}.
@@ -189,7 +189,7 @@ const AboutMe = () => {
                                         <TableCell>
                                             <Chip label="ASP.NET Core Web API"
                                                   sx={{color: "white", backgroundColor: "#502CD3"}}/>
-                                            <Chip label="Django/Django-Rest-Framework"
+                                            <Chip label="Django/DRF"
                                                   sx={{color: "white", backgroundColor: "#3FBF3F"}}/>
                                             <Chip label="Express" sx={{color: "black", backgroundColor: "#EAD41C"}}/>
                                         </TableCell>
