@@ -32,7 +32,7 @@ const MainHeader = () => {
     };
     const navLinkStyles = {
         display: "block",
-        margin: "0.5rem 0",
+        // margin: "0.5rem 0",
         textDecoration: "none",
     };
 
@@ -76,7 +76,7 @@ const MainHeader = () => {
                             }}
                         >
                             <NavLink
-                                style={{textDecoration: "none",color:"#1976d2"}}
+                                style={{textDecoration: "none",color:"#00b0f0"}}
                                 to={`/`}
 
                             >
@@ -86,7 +86,7 @@ const MainHeader = () => {
                                 </MenuItem>
                             </NavLink>
                             <NavLink
-                                style={{textDecoration: "none",color:"#1976d2"}}
+                                style={{textDecoration: "none",color:"#00b0f0"}}
                                 to={`/portfolio`}
 
                             >
@@ -96,7 +96,7 @@ const MainHeader = () => {
                                 </MenuItem>
                             </NavLink>
                             <NavLink
-                                style={{textDecoration: "none",color:"#1976d2"}}
+                                style={{textDecoration: "none",color:"#00b0f0"}}
                                 to={`/experience`}
 
                             >
@@ -115,43 +115,40 @@ const MainHeader = () => {
                     </Box>
                     <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
                         <NavLink
-                            style={navLinkStyles}
+                            style={{...navLinkStyles,backgroundColor:location.pathname === "/" ? "#00b0f0" : '#fff'}}
                             to={`/`}
 
                         >
                             <Button
                                 key="header_menu_about_me"
                                 onClick={handleCloseNavMenu}
-                                sx={{my: 2, display: 'block'}}
-                                color={location.pathname === "/" ? "secondary" : 'primary'}
+                                sx={{my: 2, display: 'block', color:location.pathname === "/" ? "#fff" : '#00b0f0'}}
                             >
                                 {translate("header_menu_about_me")}
                             </Button>
                         </NavLink>
                         <NavLink
-                            style={navLinkStyles}
+                            style={{...navLinkStyles,backgroundColor:location.pathname === "/portfolio" ? "#00b0f0" : '#fff'}}
                             to={`/portfolio`}
 
                         >
                             <Button
                                 key="header_menu_portfolio"
                                 onClick={handleCloseNavMenu}
-                                sx={{my: 2, display: 'block'}}
-                                color={location.pathname === "/portfolio" ? "secondary" : 'primary'}
+                                sx={{my: 2, display: 'block', color:location.pathname === "/portfolio" ? "#fff" : '#00b0f0'}}
                             >
                                 {translate("header_menu_portfolio")}
                             </Button>
                         </NavLink>
                         <NavLink
-                            style={navLinkStyles}
+                            style={{...navLinkStyles, backgroundColor:location.pathname === "/experience" ? "#00b0f0" : '#fff'}}
                             to={`/experience`}
 
                         >
                             <Button
                                 key="header_menu_experience"
                                 onClick={handleCloseNavMenu}
-                                sx={{my: 2, display: 'block'}}
-                                color={location.pathname === "/experience" ? "secondary" : 'primary'}
+                                sx={{my: 2, display: 'block',color:location.pathname === "/experience" ? "#fff" : '#00b0f0'}}
                             >
                                 {translate("header_menu_experience")}
                             </Button>

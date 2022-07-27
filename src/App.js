@@ -29,12 +29,12 @@ function App() {
                     container
                     justifyContent="space-evenly"
                     alignItems="center">
-
                     <Grid item xs={10} md={11} sx={{marginBottom: 10}}>
                         <Routes>
                             {routes
                                 ?.map((route) =>
-                                    <Route key={`route${route.path}`} path={route.path} element={<route.component/>}/>)
+                                    <Route key={`route${route.path}`} path={route.path}
+                                           element={<route.component/>}/>)
                             }
                         </Routes>
 
@@ -46,20 +46,16 @@ function App() {
                     right: "10px",
                     zIndex: 15
                 }}>
-                    {/*<div style={{display:"flex",*/}
-                    {/*    flexDirection:"column",}}>*/}
                     <Link to={routes[getPrevPage()].path}>
-                        <Fab aria-label="Next" sx={{marginRight: "10px"}}>
-                            <ArrowBackIosNew color="primary"/>
+                        <Fab aria-label="Next" sx={{marginRight: "10px", backgroundColor: "#fff"}}>
+                            <ArrowBackIosNew/>
                         </Fab>
                     </Link>
                     <Link to={routes[getFollowingPage()].path}>
-                        <Fab aria-label="Next" color="primary">
-                            <ArrowForwardIos/>
+                        <Fab aria-label="Next" sx={{backgroundColor: "#00b0f0"}}>
+                            <ArrowForwardIos sx={{color: "#FFF"}}/>
                         </Fab>
                     </Link>
-                    {/*</div>*/}
-
                 </div>
             </main>
         </div>
