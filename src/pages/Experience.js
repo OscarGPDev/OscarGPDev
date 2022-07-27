@@ -63,12 +63,18 @@ const Experience = () => {
                 <Typography variant="h3" sx={{marginY: "50px"}}>
                     {translate('experience_others')}
                 </Typography>
+                <div style={{display: "flex",
+                    justifyContent:"center",
+                    flexDirection:"column",
+                    alignItems:"center",
+                }}>
                 <Grid container direction="column" sx={{
-                    borderLeft: "5px solid #1976d2", width: {
+                    borderLeft: "5px solid #00b0f0",
+                    width: {
                         xs: "100%",
                         md: "40vw",
                         lg: "40vw",
-                    }
+                    },
                 }}>
                     <Grid item sx={{marginLeft: "20px"}}>
                         <Typography variant="h6">
@@ -80,7 +86,7 @@ const Experience = () => {
                     </Grid>
                 </Grid>
                 <Grid container direction="column" sx={{
-                    borderLeft: "5px solid #1976d2", width: {
+                    borderRight: "5px solid #00b0f0", width: {
                         xs: "100%",
                         md: "40vw",
                         lg: "40vw",
@@ -88,7 +94,7 @@ const Experience = () => {
                     marginY: "50px"
 
                 }}>
-                    <Grid item sx={{marginLeft: "20px"}}>
+                    <Grid item sx={{marginRight: "20px"}}>
                         <Typography variant="h6">
                             <Typography variant="overline" sx={{marginRight: "20px"}}>2022</Typography>
                             {translate("experience_hack_the_ocean_title")}
@@ -97,7 +103,7 @@ const Experience = () => {
                     </Grid>
                 </Grid>
                 <Grid container direction="column" sx={{
-                    borderLeft: "5px solid #1976d2", width: {
+                    borderLeft: "5px solid #00b0f0", width: {
                         xs: "100%",
                         md: "40vw",
                         lg: "40vw",
@@ -113,14 +119,14 @@ const Experience = () => {
                     </Grid>
                 </Grid>
                 <Grid container direction="column" sx={{
-                    borderLeft: "5px solid #1976d2", width: {
+                    borderRight: "5px solid #00b0f0", width: {
                         xs: "100%",
                         md: "40vw",
                         lg: "40vw",
                     },
                     marginY: "50px"
                 }}>
-                    <Grid item sx={{marginLeft: "20px"}}>
+                    <Grid item sx={{marginRight: "20px"}}>
                         <Typography variant="h6">
                             <Typography variant="overline" sx={{marginRight: "20px"}}>05/2019</Typography>
                             ACM ICPC
@@ -133,7 +139,7 @@ const Experience = () => {
                     </Grid>
                 </Grid>
                 <Grid container direction="column" sx={{
-                    borderLeft: "5px solid #1976d2", width: {
+                    borderLeft: "5px solid #00b0f0", width: {
                         xs: "100%",
                         md: "40vw",
                         lg: "40vw",
@@ -149,7 +155,7 @@ const Experience = () => {
                                     align="justify">{translate("experience_class_leader_body")}</Typography>
                     </Grid>
                 </Grid>
-
+                </div>
             </Paper>
         </Fade>
     );
