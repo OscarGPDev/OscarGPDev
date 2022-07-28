@@ -53,7 +53,7 @@ const MainHeader = () => {
                             aria-controls="menu-appbar"
                             aria-haspopup="true"
                             onClick={handleOpenNavMenu}
-                            color="primary"
+                            sx={{color: "#00b0f0"}}
                         >
                             <MenuIcon/>
                         </IconButton>
@@ -76,32 +76,42 @@ const MainHeader = () => {
                             }}
                         >
                             <NavLink
-                                style={{textDecoration: "none",color:"#00b0f0"}}
+                                style={{textDecoration: "none", color: "#00b0f0"}}
                                 to={`/`}
 
                             >
                                 <MenuItem key="header_menu_about_me" onClick={handleCloseNavMenu}
-                                          selected={location.pathname === "/"}>
+                                          sx={{
+                                              backgroundColor: location.pathname === "/" ? "#00b0f0" : "#fff",
+                                              color: location.pathname === "/" ? "#fff" : "#00b0f0"
+                                          }}
+                                >
                                     <Typography textAlign="center">{translate("header_menu_about_me")}</Typography>
                                 </MenuItem>
                             </NavLink>
                             <NavLink
-                                style={{textDecoration: "none",color:"#00b0f0"}}
+                                style={{textDecoration: "none", color: "#00b0f0"}}
                                 to={`/portfolio`}
 
                             >
                                 <MenuItem key="header_menu_portfolio" onClick={handleCloseNavMenu}
-                                          selected={location.pathname === "/portfolio"}>
+                                          sx={{
+                                              backgroundColor: location.pathname === "/portfolio" ? "#00b0f0" : "#fff",
+                                              color: location.pathname === "/portfolio" ? "#fff" : "#00b0f0"
+                                          }}>
                                     <Typography textAlign="center">{translate("header_menu_portfolio")}</Typography>
                                 </MenuItem>
                             </NavLink>
                             <NavLink
-                                style={{textDecoration: "none",color:"#00b0f0"}}
+                                style={{textDecoration: "none", color: "#00b0f0"}}
                                 to={`/experience`}
 
                             >
                                 <MenuItem key="header_menu_experience" onClick={handleCloseNavMenu}
-                                          selected={location.pathname === "/experience"}>
+                                          sx={{
+                                              backgroundColor: location.pathname === "/experience" ? "#00b0f0" : "#fff",
+                                              color: location.pathname === "/experience" ? "#fff" : "#00b0f0"
+                                          }}>
                                     <Typography textAlign="center">{translate("header_menu_experience")}</Typography>
                                 </MenuItem>
                             </NavLink>
@@ -115,40 +125,54 @@ const MainHeader = () => {
                     </Box>
                     <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
                         <NavLink
-                            style={{...navLinkStyles,backgroundColor:location.pathname === "/" ? "#00b0f0" : '#fff'}}
+                            style={{...navLinkStyles, backgroundColor: location.pathname === "/" ? "#00b0f0" : '#fff'}}
                             to={`/`}
 
                         >
                             <Button
                                 key="header_menu_about_me"
                                 onClick={handleCloseNavMenu}
-                                sx={{my: 2, display: 'block', color:location.pathname === "/" ? "#fff" : '#00b0f0'}}
+                                sx={{my: 2, display: 'block', color: location.pathname === "/" ? "#fff" : '#00b0f0'}}
                             >
                                 {translate("header_menu_about_me")}
                             </Button>
                         </NavLink>
                         <NavLink
-                            style={{...navLinkStyles,backgroundColor:location.pathname === "/portfolio" ? "#00b0f0" : '#fff'}}
+                            style={{
+                                ...navLinkStyles,
+                                backgroundColor: location.pathname === "/portfolio" ? "#00b0f0" : '#fff'
+                            }}
                             to={`/portfolio`}
 
                         >
                             <Button
                                 key="header_menu_portfolio"
                                 onClick={handleCloseNavMenu}
-                                sx={{my: 2, display: 'block', color:location.pathname === "/portfolio" ? "#fff" : '#00b0f0'}}
+                                sx={{
+                                    my: 2,
+                                    display: 'block',
+                                    color: location.pathname === "/portfolio" ? "#fff" : '#00b0f0'
+                                }}
                             >
                                 {translate("header_menu_portfolio")}
                             </Button>
                         </NavLink>
                         <NavLink
-                            style={{...navLinkStyles, backgroundColor:location.pathname === "/experience" ? "#00b0f0" : '#fff'}}
+                            style={{
+                                ...navLinkStyles,
+                                backgroundColor: location.pathname === "/experience" ? "#00b0f0" : '#fff'
+                            }}
                             to={`/experience`}
 
                         >
                             <Button
                                 key="header_menu_experience"
                                 onClick={handleCloseNavMenu}
-                                sx={{my: 2, display: 'block',color:location.pathname === "/experience" ? "#fff" : '#00b0f0'}}
+                                sx={{
+                                    my: 2,
+                                    display: 'block',
+                                    color: location.pathname === "/experience" ? "#fff" : '#00b0f0'
+                                }}
                             >
                                 {translate("header_menu_experience")}
                             </Button>

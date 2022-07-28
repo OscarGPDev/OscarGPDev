@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import {useTranslation} from "react-i18next";
-import {CameraIndoor, FitnessCenter, MusicNote, VideogameAsset} from "@mui/icons-material";
+import {CameraIndoor, FitnessCenter, MusicNote, VideogameAsset, KeyboardArrowDownRounded} from "@mui/icons-material";
 //import Background from "/wallhaven-p822gp.jpg"
 
 const AboutMe = () => {
@@ -26,6 +26,12 @@ const AboutMe = () => {
                       direction="row"
                       justifyContent="center"
                       alignItems="center">
+                    <Grid item xs={12} lg={10} sx={{height:"95vh", display:"flex", justifyContent:"center",alignItems: "center",flexDirection:"column",}}>
+                        <Typography className="fira-text" sx={{fontSize:"1.5vmax",color:"#00b0f0"}}>{"<"}Welcome{"/>"}</Typography>
+                        <Typography className="fira-text" sx={{fontSize:"5vmax"}}>Oscar Guzmán</Typography>
+                        <Typography className="fira-text" sx={{fontSize:"2.5vmax"}}>Full Stack developer</Typography>
+                        <KeyboardArrowDownRounded className="scroll-down" sx={{fontSize:"10vmax"}}/>
+                    </Grid>
                     <Grid item xs={12} lg={5}>
                         <Typography variant="h3" gutterBottom>
                             {translation('aboutMe_title')}
