@@ -27,9 +27,9 @@ const AboutMe = () => {
                       justifyContent="center"
                       alignItems="center">
                     <Grid item xs={12} lg={10} sx={{height:"95vh", display:"flex", justifyContent:"center",alignItems: "center",flexDirection:"column",}}>
-                        <Typography className="fira-text" sx={{fontSize:"1.5vmax",color:"#00b0f0"}}>{"<"}Welcome{"/>"}</Typography>
+                        <Typography className="fira-text spaced-text" sx={{fontSize:"1.5vmax",color:"#00b0f0",letterSpacing:"1rem"}}>{`<${translation("welcome")}/>`}</Typography>
                         <Typography className="fira-text" sx={{fontSize:"5vmax"}}>Oscar Guzmán</Typography>
-                        <Typography className="fira-text" sx={{fontSize:"2.5vmax"}}>Full Stack developer</Typography>
+                        <Typography className="fira-text" sx={{fontSize:"2.5vmax"}}>FullStack developer</Typography>
                         <KeyboardArrowDownRounded className="scroll-down" sx={{fontSize:"10vmax"}}/>
                     </Grid>
                     <Grid item xs={12} lg={5}>
