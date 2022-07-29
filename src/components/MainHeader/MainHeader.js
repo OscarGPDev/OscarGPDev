@@ -32,7 +32,6 @@ const MainHeader = () => {
     };
     const navLinkStyles = {
         display: "block",
-        // margin: "0.5rem 0",
         textDecoration: "none",
     };
 
