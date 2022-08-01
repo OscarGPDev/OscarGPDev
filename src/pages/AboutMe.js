@@ -100,7 +100,7 @@ const AboutMe = () => {
                                     <TableRow>
                                         <TableCell>{translation("aboutMe_table_languages")}</TableCell>
                                         <TableCell>
-                                            <Grid container>
+                                            <Grid container direction="column">
                                                 <Grid item>
                                                     <Typography variant="subtitle1" component="div">
                                                         {translation("aboutMe_table_languages_english")}
