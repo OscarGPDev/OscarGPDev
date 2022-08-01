@@ -1,30 +1,12 @@
 import {Fade, Grid, Paper} from "@mui/material";
 import Typography from "@mui/material/Typography";
 import {useTranslation} from "react-i18next";
-import TagsDrawer from "../components/MainHeader/TagsDrawer";
-import LinksDrawer from "../components/LinksDrawer";
 import ProjectCard from "../components/ProjectCard";
 
 
 const Portfolio = () => {
     const {t: translation} = useTranslation();
-    const headers = [{
-        id: 'project', title: translation("portfolio_table_project_name"), dataSource: 'projectName',
-    }, {
-        id: 'technologies', title: translation("portfolio_table_technologies"), dataSource: 'technologies',
-        drawFunction: (rowElement) => (<TagsDrawer data={rowElement.technologies}/>)
-    }, {
-        id: 'date', title: translation("portfolio_table_date"), dataSource: 'date', orderBy: true, ascending: false
-    }, {
-        id: 'links', title: translation("portfolio_table_links"), dataSource: 'link',
-        drawFunction: (rowElement) => <LinksDrawer links={rowElement.links}/>
-    }, {
-        id: 'description', title: translation("portfolio_table_description"), dataSource: 'description',
-        sx: {minWidth: "300px"},
-        sxBody: {
-            textAlign: "justify"
-        }
-    }];
+
     const portfolioData = [
         {
             projectName: 'Kelp me!',
