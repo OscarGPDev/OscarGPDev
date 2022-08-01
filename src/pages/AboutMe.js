@@ -97,6 +97,34 @@ const AboutMe = () => {
                                         <TableCell><Link href="https://www.linkedin.com/in/oscargpdev"
                                                          target="_blank">OscarGPDev</Link></TableCell>
                                     </TableRow>
+                                    <TableRow>
+                                        <TableCell>{translation("aboutMe_table_languages")}</TableCell>
+                                        <TableCell>
+                                            <Grid container>
+                                                <Grid item>
+                                                    <Typography variant="subtitle1" component="div">
+                                                        {translation("aboutMe_table_languages_english")}
+                                                    </Typography>
+                                                    <Typography variant="body" component="div">
+                                                        {translation("aboutMe_table_languages_english_description")}
+                                                    </Typography>
+                                                </Grid>
+                                                <Grid item>
+                                                    <Typography variant="subtitle1" component="div">
+                                                        {translation("aboutMe_table_languages_russian")}
+                                                    </Typography>
+                                                    <Typography variant="body" component="div">
+                                                        {translation("aboutMe_table_languages_russian_description")}
+                                                    </Typography>
+                                                </Grid>
+                                                <Grid item>
+                                                    <Link
+                                                        href="https://www.duolingo.com/profile/OscarWolfm?via=share_profile"
+                                                        target="_blank">{translation("aboutMe_table_languages_duolingo")}</Link>
+                                                </Grid>
+                                            </Grid>
+                                        </TableCell>
+                                    </TableRow>
                                 </TableBody>
                             </Table>
                         </TableContainer>
