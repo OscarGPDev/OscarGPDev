@@ -1,7 +1,6 @@
 import {Fade, Grid, Paper} from "@mui/material";
 import Typography from "@mui/material/Typography";
 import {useTranslation} from "react-i18next";
-import DataTable from "../components/DataTable";
 import TagsDrawer from "../components/MainHeader/TagsDrawer";
 import LinksDrawer from "../components/LinksDrawer";
 import ProjectCard from "../components/ProjectCard";
@@ -116,16 +115,6 @@ const Portfolio = () => {
                 date={portfolioItem.date}
                 description={portfolioItem.description}/></Grid>))}
         </Grid>
-        <DataTable data={portfolioData} headers={headers} sx={{
-            maxHeight: {
-                sx: "70vh",
-                md: "auto"
-            },
-            overflowY: {
-                sx: "scroll",
-                md: "auto"
-            }
-        }}/>
     </Paper></Fade>);
 };
 export default Portfolio;
