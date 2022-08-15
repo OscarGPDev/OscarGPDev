@@ -232,7 +232,7 @@ const AboutMe = () => {
                                     <TableBody>
                                         <TableRow>
                                             <TableCell sx={{width: "30%"}}>
-                                                React - 2 {translation("year_experience")}.
+                                                React - 2 {translation("years_experience")}.
                                             </TableCell>
                                             <TableCell>
                                                 <LinearProgress variant="determinate" value={100} sx={{
