@@ -16,6 +16,8 @@
   "aboutMe_table_github": "GitHub",
   "aboutMe_table_linkedin": "Linkedin",
   "aboutMe_table_languages": "Languages",
+  "aboutMe_table_languages_spanish": "Spanish",
+  "aboutMe_table_languages_spanish_description": "Native.",
   "aboutMe_table_languages_english": "English",
   "aboutMe_table_languages_english_description": "Conversational intermediate, advanced reading.",
   "aboutMe_table_languages_russian": "Russian",

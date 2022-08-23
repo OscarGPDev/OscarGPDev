@@ -103,6 +103,14 @@ const AboutMe = () => {
                                             <Grid container direction="column">
                                                 <Grid item>
                                                     <Typography variant="subtitle1" component="div">
+                                                        {translation("aboutMe_table_languages_spanish")}
+                                                    </Typography>
+                                                    <Typography variant="body" component="div">
+                                                        {translation("aboutMe_table_languages_spanish_description")}
+                                                    </Typography>
+                                                </Grid>
+                                                <Grid item>
+                                                    <Typography variant="subtitle1" component="div">
                                                         {translation("aboutMe_table_languages_english")}
                                                     </Typography>
                                                     <Typography variant="body" component="div">
