@@ -21,6 +21,7 @@ const ProjectCard = ({
         >
             <ProjectCardBase image={image} date={date} title={title} description={description} data={tags}
                              links={links} onClick={handleOpen} translation={translation("details")}
+                             isModal={true}
                              cardSx={{
                                  position: 'absolute',
                                  top: '50%',

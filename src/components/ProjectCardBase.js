@@ -19,7 +19,7 @@ export const ProjectCardBase = (props) => {
             <Typography gutterBottom variant="h5" component="div">
                 {props.title}
             </Typography>
-            <Typography variant="body2" color="text.secondary" noWrap={true}>
+            <Typography variant="body2" color="text.secondary" noWrap={!props.isModal}>
                 {props.description}
             </Typography>
         </CardContent>
