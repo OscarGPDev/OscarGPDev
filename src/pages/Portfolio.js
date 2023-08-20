@@ -2,19 +2,36 @@ import {Fade, Grid, Paper} from "@mui/material";
 import Typography from "@mui/material/Typography";
 import {useTranslation} from "react-i18next";
 import ProjectCard from "../components/ProjectCard";
+import {getInitialLanguage} from "../functions/language";
+import {languages} from "../objects/languages";
+import {useEffect, useState} from "react";
 
 
 const Portfolio = () => {
     const {t: translation} = useTranslation();
-
+    const [portfolioDataFirestore, setPortfolioDataFirestore]=useState([])
+    // useEffect(()=>{
+    //
+    // },[])
     const portfolioData = [
         {
             projectName: 'Kelp me!',
             date: '05/2022',
             description: translation("portfolio_table_kelpme_description"),
             image: "https://firebasestorage.googleapis.com/v0/b/oscargpdev.appspot.com/o/images%2Fprojects%2Fkelp_me.png?alt=media&token=210e672f-3328-42a0-b87b-918cedf54701",
-            technologies: ['Vue.js', 'JavaScript', 'Express', 'Prisma'],
-            links: [{name: "GitHub", link: 'https://github.com/OscarGPDev/Kelpme'}]
+            technologies: ['Vue.js', 'JavaScript', 'Express', 'Node.js'],
+            links: [{name: "GitHub", link: 'https://github.com/OscarGPDev/Kelpme'}],
+            get desc(){
+                const currentLanguage = getInitialLanguage();
+                let description;
+                if (currentLanguage===languages.es){
+                    description = this.description_es
+                }
+                if(currentLanguage===languages.en){
+                    description = this.description_en
+                }
+                return description
+            }
         },
         {
             projectName: 'OscarGPDev',

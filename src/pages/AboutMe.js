@@ -53,7 +53,7 @@ const AboutMe = () => {
 
                             }}>{`/>`}</Typography>
                         </Grid>
-                        <Typography className="fira-text" sx={{fontSize: "5vmax"}}>Oscar Guzmán</Typography>
+                        <Typography className="fira-text" sx={{fontSize: "5vmax"}}>Oscar G. Pérez</Typography>
                         <Typography className="fira-text" sx={{fontSize: "2.5vmax"}}>FullStack developer</Typography>
                         <KeyboardArrowDownRounded className="scroll-down" sx={{fontSize: "10vmax"}}/>
                     </Grid>

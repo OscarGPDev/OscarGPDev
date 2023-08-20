@@ -5,7 +5,19 @@ import DrawTechnologies from "../components/MainHeader/TagsDrawer";
 
 const Experience = () => {
     const {t: translate} = useTranslation();
-    const experienceData = [{
+    const experienceData = [
+        {
+            company: "Sngular",
+            technologies: [
+                "Java",
+                "JavaScript",
+                "Node.js",
+                "Lit Element",
+                "HTML"
+            ],
+            description: translate("experience_table_sngular_description"),
+            period: "10/2022"
+        },{
         company: "JD Solutions",
         technologies: [
             ".Net Framework",
@@ -73,8 +85,21 @@ const Experience = () => {
                                 {translate("experience_certifications")}
                             </Typography>
                             <Typography variant="body1" align="justify">
+                                <Typography variant="overline" sx={{marginRight: "20px"}}>02/2023</Typography>
+                                Scrum Developer.
+                            </Typography>
+                            <Typography variant="body1" align="justify">
+                                <Typography variant="overline" sx={{marginRight: "20px"}}>01/2023</Typography>
+                                Scrum Fundamentals.
+                            </Typography>
+                            <Typography variant="body1" align="justify">
+                                <Typography variant="overline" sx={{marginRight: "20px"}}>01/2023</Typography>
+                                {translate("experience_certifications_secure_development")}
+                            </Typography>
+                            <Typography variant="body1" align="justify">
                                 <Typography variant="overline" sx={{marginRight: "20px"}}>06/2022</Typography>
-                                {translate("experience_certifications_azure")}</Typography>
+                                {translate("experience_certifications_azure")}
+                            </Typography>
                         </Grid>
                     </Grid>
                     <Grid container direction="column" sx={{

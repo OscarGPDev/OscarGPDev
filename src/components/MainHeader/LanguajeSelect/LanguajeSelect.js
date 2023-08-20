@@ -2,20 +2,10 @@ import {useEffect, useState} from "react";
 import i18next from "i18next";
 import {FormControl, Select} from "@mui/material";
 import MenuItem from "@mui/material/MenuItem";
+import {getInitialLanguage} from "../../../functions/language";
+import {languageMap} from "../../../objects/languageMap";
 
-const languageMap = {
-    'en': {label: "EN"},
-    'es-MX': {label: "ES"}
-};
-const getInitialLanguage = () => {
-    const currentLanguage = localStorage.getItem("i18nextLng");
-    if (currentLanguage && currentLanguage.includes("es")) {
-        return "es-MX";
-    } else {
-        return "en";
-    }
 
-};
 
 
 const LanguageSelect = () => {
