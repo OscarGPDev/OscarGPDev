@@ -4,12 +4,11 @@ import {useTranslation} from "react-i18next";
 import ProjectCard from "../components/ProjectCard";
 import {getInitialLanguage} from "../functions/language";
 import {languages} from "../objects/languages";
-import {useEffect, useState} from "react";
 
 
 const Portfolio = () => {
     const {t: translation} = useTranslation();
-    const [portfolioDataFirestore, setPortfolioDataFirestore]=useState([])
+    // const [portfolioDataFirestore, setPortfolioDataFirestore]=useState([])
     // useEffect(()=>{
     //
     // },[])
