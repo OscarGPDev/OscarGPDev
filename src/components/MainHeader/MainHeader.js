@@ -90,19 +90,6 @@ const MainHeader = () => {
                             </NavLink>
                             <NavLink
                                 style={{textDecoration: "none", color: "#00b0f0"}}
-                                to={`/portfolio`}
-
-                            >
-                                <MenuItem key="header_menu_portfolio" onClick={handleCloseNavMenu}
-                                          sx={{
-                                              backgroundColor: location.pathname === "/portfolio" ? "#00b0f0" : "#fff",
-                                              color: location.pathname === "/portfolio" ? "#fff" : "#00b0f0"
-                                          }}>
-                                    <Typography textAlign="center">{translate("header_menu_portfolio")}</Typography>
-                                </MenuItem>
-                            </NavLink>
-                            <NavLink
-                                style={{textDecoration: "none", color: "#00b0f0"}}
                                 to={`/experience`}
 
                             >
@@ -112,6 +99,19 @@ const MainHeader = () => {
                                               color: location.pathname === "/experience" ? "#fff" : "#00b0f0"
                                           }}>
                                     <Typography textAlign="center">{translate("header_menu_experience")}</Typography>
+                                </MenuItem>
+                            </NavLink>
+                            <NavLink
+                                style={{textDecoration: "none", color: "#00b0f0"}}
+                                to={`/portfolio`}
+
+                            >
+                                <MenuItem key="header_menu_portfolio" onClick={handleCloseNavMenu}
+                                          sx={{
+                                              backgroundColor: location.pathname === "/portfolio" ? "#00b0f0" : "#fff",
+                                              color: location.pathname === "/portfolio" ? "#fff" : "#00b0f0"
+                                          }}>
+                                    <Typography textAlign="center">{translate("header_menu_portfolio")}</Typography>
                                 </MenuItem>
                             </NavLink>
                         </Menu>
@@ -139,26 +139,6 @@ const MainHeader = () => {
                         <NavLink
                             style={{
                                 ...navLinkStyles,
-                                backgroundColor: location.pathname === "/portfolio" ? "#00b0f0" : '#fff'
-                            }}
-                            to={`/portfolio`}
-
-                        >
-                            <Button
-                                key="header_menu_portfolio"
-                                onClick={handleCloseNavMenu}
-                                sx={{
-                                    my: 2,
-                                    display: 'block',
-                                    color: location.pathname === "/portfolio" ? "#fff" : '#00b0f0'
-                                }}
-                            >
-                                {translate("header_menu_portfolio")}
-                            </Button>
-                        </NavLink>
-                        <NavLink
-                            style={{
-                                ...navLinkStyles,
                                 backgroundColor: location.pathname === "/experience" ? "#00b0f0" : '#fff'
                             }}
                             to={`/experience`}
@@ -174,6 +154,26 @@ const MainHeader = () => {
                                 }}
                             >
                                 {translate("header_menu_experience")}
+                            </Button>
+                        </NavLink>
+                        <NavLink
+                            style={{
+                                ...navLinkStyles,
+                                backgroundColor: location.pathname === "/portfolio" ? "#00b0f0" : '#fff'
+                            }}
+                            to={`/portfolio`}
+
+                        >
+                            <Button
+                                key="header_menu_portfolio"
+                                onClick={handleCloseNavMenu}
+                                sx={{
+                                    my: 2,
+                                    display: 'block',
+                                    color: location.pathname === "/portfolio" ? "#fff" : '#00b0f0'
+                                }}
+                            >
+                                {translate("header_menu_portfolio")}
                             </Button>
                         </NavLink>
                     </Box>
