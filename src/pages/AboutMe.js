@@ -55,7 +55,7 @@ const AboutMe = () => {
                         </Grid>
                         <Typography className="fira-text" sx={{fontSize: "5vmax"}}>Oscar G. Pérez</Typography>
                         <Typography className="fira-text" sx={{fontSize: "2.5vmax"}}>FullStack developer</Typography>
-                        <KeyboardArrowDownRounded className="scroll-down" sx={{fontSize: "10vmax"}}/>
+                        <KeyboardArrowDownRounded className="scroll-down" sx={{fontSize: "10vmax",border:"none"}}/>
                     </Grid>
                     <Grid item xs={12} lg={5}>
                         <Typography variant="h3" gutterBottom>

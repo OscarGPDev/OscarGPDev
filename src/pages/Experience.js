@@ -38,7 +38,7 @@ const Experience = () => {
                     <Grid item sx={{
                         width: {
                             xs: "100%",
-                            md: "40vw",
+                            md: "80vw",
                             lg: "40vw",
                         },
                     }}
@@ -51,7 +51,7 @@ const Experience = () => {
                                                      sx={{
                                                          width: {
                                                              xs: "100%",
-                                                             md: "40vw",
+                                                             md: "60vw",
                                                              lg: "40vw",
                                                          }
                                                      }}>

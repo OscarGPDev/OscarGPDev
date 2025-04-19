@@ -7,14 +7,14 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import {useState} from "react";
 import LanguageSelect from "./LanguajeSelect/LanguajeSelect";
 import {useTranslation} from "react-i18next";
 import {NavLink, useLocation} from "react-router-dom";
-
+import {useThemeContext} from "../theme/ThemeContextProvider";
+import ThemeSwitch from "./ThemeSwitch";
 
 const MainHeader = () => {
     const [anchorElNav, setAnchorElNav] = useState(null);
@@ -35,8 +35,13 @@ const MainHeader = () => {
         textDecoration: "none",
     };
 
+    const {theme} = useThemeContext()
     return (
-        <AppBar position="static" sx={{background: "#FFF", color: "#000000"}}>
+        <AppBar position="static"
+                sx={
+                    {background: theme.palette.background.default, color: "#000000"}
+                }
+        >
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Box
@@ -81,8 +86,8 @@ const MainHeader = () => {
                             >
                                 <MenuItem key="header_menu_about_me" onClick={handleCloseNavMenu}
                                           sx={{
-                                              backgroundColor: location.pathname === "/" ? "#00b0f0" : "#fff",
-                                              color: location.pathname === "/" ? "#fff" : "#00b0f0"
+                                              backgroundColor: location.pathname === "/" ? "#00b0f0" : theme.palette.background.default,
+                                              color: location.pathname === "/" ? theme.palette.background.default : "#00b0f0"
                                           }}
                                 >
                                     <Typography textAlign="center">{translate("header_menu_about_me")}</Typography>
@@ -95,8 +100,8 @@ const MainHeader = () => {
                             >
                                 <MenuItem key="header_menu_experience" onClick={handleCloseNavMenu}
                                           sx={{
-                                              backgroundColor: location.pathname === "/experience" ? "#00b0f0" : "#fff",
-                                              color: location.pathname === "/experience" ? "#fff" : "#00b0f0"
+                                              backgroundColor: location.pathname === "/experience" ? "#00b0f0" : theme.palette.background.default,
+                                              color: location.pathname === "/experience" ? theme.palette.background.default : "#00b0f0"
                                           }}>
                                     <Typography textAlign="center">{translate("header_menu_experience")}</Typography>
                                 </MenuItem>
@@ -108,8 +113,8 @@ const MainHeader = () => {
                             >
                                 <MenuItem key="header_menu_portfolio" onClick={handleCloseNavMenu}
                                           sx={{
-                                              backgroundColor: location.pathname === "/portfolio" ? "#00b0f0" : "#fff",
-                                              color: location.pathname === "/portfolio" ? "#fff" : "#00b0f0"
+                                              backgroundColor: location.pathname === "/portfolio" ? "#00b0f0" : theme.palette.background.default,
+                                              color: location.pathname === "/portfolio" ? theme.palette.background.default : "#00b0f0"
                                           }}>
                                     <Typography textAlign="center">{translate("header_menu_portfolio")}</Typography>
                                 </MenuItem>
@@ -124,14 +129,17 @@ const MainHeader = () => {
                     </Box>
                     <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
                         <NavLink
-                            style={{...navLinkStyles, backgroundColor: location.pathname === "/" ? "#00b0f0" : '#fff'}}
+                            style={{
+                                ...navLinkStyles,
+                                backgroundColor: location.pathname === "/" ? "#00b0f0" : theme.palette.background.default
+                            }}
                             to={`/`}
 
                         >
                             <Button
                                 key="header_menu_about_me"
                                 onClick={handleCloseNavMenu}
-                                sx={{my: 2, display: 'block', color: location.pathname === "/" ? "#fff" : '#00b0f0'}}
+                                sx={{my: 2, display: 'block', color: location.pathname === "/" ? theme.palette.background.default : '#00b0f0'}}
                             >
                                 {translate("header_menu_about_me")}
                             </Button>
@@ -139,7 +147,7 @@ const MainHeader = () => {
                         <NavLink
                             style={{
                                 ...navLinkStyles,
-                                backgroundColor: location.pathname === "/experience" ? "#00b0f0" : '#fff'
+                                backgroundColor: location.pathname === "/experience" ? '#00b0f0' : theme.palette.background.default
                             }}
                             to={`/experience`}
 
@@ -150,7 +158,7 @@ const MainHeader = () => {
                                 sx={{
                                     my: 2,
                                     display: 'block',
-                                    color: location.pathname === "/experience" ? "#fff" : '#00b0f0'
+                                    color: location.pathname === "/experience" ? theme.palette.background.default : '#00b0f0'
                                 }}
                             >
                                 {translate("header_menu_experience")}
@@ -159,7 +167,7 @@ const MainHeader = () => {
                         <NavLink
                             style={{
                                 ...navLinkStyles,
-                                backgroundColor: location.pathname === "/portfolio" ? "#00b0f0" : '#fff'
+                                backgroundColor: location.pathname === "/portfolio" ? '#00b0f0' : theme.palette.background.default
                             }}
                             to={`/portfolio`}
 
@@ -170,7 +178,7 @@ const MainHeader = () => {
                                 sx={{
                                     my: 2,
                                     display: 'block',
-                                    color: location.pathname === "/portfolio" ? "#fff" : '#00b0f0'
+                                    color: location.pathname === "/portfolio" ? theme.palette.background.default : '#00b0f0'
                                 }}
                             >
                                 {translate("header_menu_portfolio")}
@@ -178,8 +186,9 @@ const MainHeader = () => {
                         </NavLink>
                     </Box>
 
-                    <Box sx={{flexGrow: 0}}>
+                    <Box sx={{flexGrow: 0, display: "flex", justifyItems: "right", alignItems: "center"}}>
                         <LanguageSelect/>
+                        <ThemeSwitch/>
                     </Box>
                 </Toolbar>
             </Container>
