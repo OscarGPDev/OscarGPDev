@@ -4,7 +4,7 @@ import {useColorTheme} from "./useColorTheme";
 
 
 export const ThemeContext = createContext({
-    mode: "light",
+    mode: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light",
     toggleColorMode: () => {
     },
     theme: createTheme(),
