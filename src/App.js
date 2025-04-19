@@ -26,12 +26,13 @@ function App() {
             <div className="App">
 
                 <MainHeader/>
-                <main className="App-body">
+                <main className="App-body"
+                      style={{backgroundColor: theme.palette.background.default}}
+                >
                     <Grid
                         container
                         justifyContent="space-evenly"
                         alignItems="center"
-                        sx={{backgroundColor: theme.palette.background.default}}
                     >
                         <Grid item xs={10} md={11}
                               sx={{

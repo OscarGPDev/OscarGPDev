@@ -8,10 +8,6 @@ import {languages} from "../objects/languages";
 
 const Portfolio = () => {
     const {t: translation} = useTranslation();
-    // const [portfolioDataFirestore, setPortfolioDataFirestore]=useState([])
-    // useEffect(()=>{
-    //
-    // },[])
     const portfolioData = [
         {
             projectName: 'Kelp me!',
