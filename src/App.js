@@ -57,12 +57,13 @@ function App() {
                     }}>
                         <Link to={routes[getPrevPage()].path}>
                             <Fab aria-label="Next"
+                                 color="secondary"
                                  sx={{marginRight: "10px", backgroundColor: theme.palette.background.default}}>
                                 <ArrowBackIosNew sx={{color: theme.palette.text.primary}}/>
                             </Fab>
                         </Link>
                         <Link to={routes[getFollowingPage()].path}>
-                            <Fab aria-label="Next" sx={{backgroundColor: "#00b0f0"}}>
+                            <Fab aria-label="Next" color="primary" sx={{backgroundColor: "#00b0f0"}}>
                                 <ArrowForwardIos sx={{color: "#FFF"}}/>
                             </Fab>
                         </Link>

@@ -10,23 +10,11 @@ const Portfolio = () => {
     const {t: translation} = useTranslation();
     const portfolioData = [
         {
-            projectName: 'Kelp me!',
-            date: '05/2022',
-            description: translation("portfolio_table_kelpme_description"),
-            image: "https://firebasestorage.googleapis.com/v0/b/oscargpdev.appspot.com/o/images%2Fprojects%2Fkelp_me.png?alt=media&token=210e672f-3328-42a0-b87b-918cedf54701",
-            technologies: ['Vue.js', 'JavaScript', 'Express', 'Node.js'],
-            links: [{name: "GitHub", link: 'https://github.com/OscarGPDev/Kelpme'}],
-            get desc(){
-                const currentLanguage = getInitialLanguage();
-                let description;
-                if (currentLanguage===languages.es){
-                    description = this.description_es
-                }
-                if(currentLanguage===languages.en){
-                    description = this.description_en
-                }
-                return description
-            }
+            projectName: 'MuseumMax',
+            date: '01/2022',
+            image: "https://firebasestorage.googleapis.com/v0/b/oscargpdev.appspot.com/o/images%2Fprojects%2Fmuseummax.png?alt=media&token=7c456b6b-b69f-495b-acc4-acf8652077e0",
+            description: translation("portfolio_table_museummax_description"),
+            technologies: ['React', 'MUI', 'Django-Rest-Framework', 'MariaDB', 'Firebase', 'Python'],
         },
         {
             projectName: 'OscarGPDev',
@@ -35,6 +23,25 @@ const Portfolio = () => {
             technologies: ['React', 'JavaScript'],
             image: "https://firebasestorage.googleapis.com/v0/b/oscargpdev.appspot.com/o/images%2Fprojects%2Fportfolio.png?alt=media&token=bc5d5715-5449-40da-ba28-36b1951b583f",
             links: []
+        },
+        {
+            projectName: 'Kelp me!',
+            date: '05/2022',
+            description: translation("portfolio_table_kelpme_description"),
+            image: "https://firebasestorage.googleapis.com/v0/b/oscargpdev.appspot.com/o/images%2Fprojects%2Fkelp_me.png?alt=media&token=210e672f-3328-42a0-b87b-918cedf54701",
+            technologies: ['Vue.js', 'JavaScript', 'Express', 'Node.js'],
+            links: [{name: "GitHub", link: 'https://github.com/OscarGPDev/Kelpme'}],
+            get desc() {
+                const currentLanguage = getInitialLanguage();
+                let description;
+                if (currentLanguage === languages.es) {
+                    description = this.description_es
+                }
+                if (currentLanguage === languages.en) {
+                    description = this.description_en
+                }
+                return description
+            }
         },
         {
             projectName: 'DeliDeliCake (Vue)',
@@ -83,14 +90,6 @@ const Portfolio = () => {
                     name: 'GitHub',
                     link: 'https://github.com/OscarGPDev/LaunchX_exercises/tree/main/FrontendMision/Semana%202%20-%20Primer%20vuelo'
                 }]
-        },
-        {
-            projectName: 'MuseumMax',
-            date: '01/2022',
-            image: "https://firebasestorage.googleapis.com/v0/b/oscargpdev.appspot.com/o/images%2Fprojects%2Fmuseummax.png?alt=media&token=7c456b6b-b69f-495b-acc4-acf8652077e0",
-            description: translation("portfolio_table_museummax_description"),
-            technologies: ['React', 'MUI', 'Django-Rest-Framework', 'MariaDB', 'Firebase', 'Python'],
-            links: [{name: translation('portfolio_table_link_to_site'), link: 'https://museummax-20c21.web.app/'}]
         },
     ];
     return (<Fade in timeout={2000}><Paper elevation={0}>

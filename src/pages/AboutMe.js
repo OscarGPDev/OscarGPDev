@@ -18,9 +18,11 @@ import {
 import Typography from "@mui/material/Typography";
 import {useTranslation} from "react-i18next";
 import {CameraIndoor, FitnessCenter, KeyboardArrowDownRounded, MusicNote, VideogameAsset} from "@mui/icons-material";
+import {useThemeContext} from "../components/theme/ThemeContextProvider";
 
 const AboutMe = () => {
     const {t: translation} = useTranslation();
+    const {theme} = useThemeContext();
     return (
         <Fade in timeout={2000}>
             <Paper elevation={0}>
@@ -55,7 +57,7 @@ const AboutMe = () => {
                         </Grid>
                         <Typography className="fira-text" sx={{fontSize: "5vmax"}}>Oscar G. Pérez</Typography>
                         <Typography className="fira-text" sx={{fontSize: "2.5vmax"}}>FullStack developer</Typography>
-                        <KeyboardArrowDownRounded className="scroll-down" sx={{fontSize: "10vmax",border:"none"}}/>
+                        <KeyboardArrowDownRounded className="scroll-down" sx={{fontSize: "10vmax", border: "none"}}/>
                     </Grid>
                     <Grid item xs={12} lg={5}>
                         <Typography variant="h3" gutterBottom>
@@ -160,6 +162,21 @@ const AboutMe = () => {
                                 <Table>
                                     <TableBody>
                                         <TableRow>
+                                            <TableCell>JavaScript/TypeScript 5
+                                                - {translation("years_experience")}.</TableCell>
+                                            <TableCell><LinearProgress variant="determinate" value={100} sx={{
+                                                height: 20,
+                                                borderRadius: 5,
+                                                [`&.${linearProgressClasses.colorPrimary}`]: {
+                                                    backgroundColor: theme.palette.mode === "dark" ? "#424242" : "#eee",
+                                                },
+                                                [`& .${linearProgressClasses.bar}`]: {
+                                                    borderRadius: 5,
+                                                    backgroundColor: "rgba(234,212,28,1)",
+                                                },
+                                            }}/></TableCell>
+                                        </TableRow>
+                                        <TableRow>
                                             <TableCell sx={{width: "30%"}}>
                                                 .NET Framework/.NET Core -
                                                 2 {translation("years_experience")}.
@@ -169,7 +186,7 @@ const AboutMe = () => {
                                                     height: 20,
                                                     borderRadius: 5,
                                                     [`&.${linearProgressClasses.colorPrimary}`]: {
-                                                        backgroundColor: "#eee",
+                                                        backgroundColor: theme.palette.mode === "dark" ? "#424242" : "#eee",
                                                     },
                                                     [`& .${linearProgressClasses.bar}`]: {
                                                         borderRadius: 5,
@@ -187,7 +204,7 @@ const AboutMe = () => {
                                                     height: 20,
                                                     borderRadius: 5,
                                                     [`&.${linearProgressClasses.colorPrimary}`]: {
-                                                        backgroundColor: "#eee",
+                                                        backgroundColor: theme.palette.mode === "dark" ? "#424242" : "#eee",
                                                     },
                                                     [`& .${linearProgressClasses.bar}`]: {
                                                         borderRadius: 5,
@@ -202,26 +219,11 @@ const AboutMe = () => {
                                                 height: 20,
                                                 borderRadius: 5,
                                                 [`&.${linearProgressClasses.colorPrimary}`]: {
-                                                    backgroundColor: "#eee",
+                                                    backgroundColor: theme.palette.mode === "dark" ? "#424242" : "#eee",
                                                 },
                                                 [`& .${linearProgressClasses.bar}`]: {
                                                     borderRadius: 5,
                                                     backgroundColor: "rgba(231,111,0,1)",
-                                                },
-                                            }}/></TableCell>
-                                        </TableRow>
-                                        <TableRow>
-                                            <TableCell>JavaScript/TypeScript 3
-                                                - {translation("years_experience")}.</TableCell>
-                                            <TableCell><LinearProgress variant="determinate" value={100} sx={{
-                                                height: 20,
-                                                borderRadius: 5,
-                                                [`&.${linearProgressClasses.colorPrimary}`]: {
-                                                    backgroundColor: "#eee",
-                                                },
-                                                [`& .${linearProgressClasses.bar}`]: {
-                                                    borderRadius: 5,
-                                                    backgroundColor: "rgba(234,212,28,1)",
                                                 },
                                             }}/></TableCell>
                                         </TableRow>
@@ -238,16 +240,35 @@ const AboutMe = () => {
                             <CardContent>
                                 <Table>
                                     <TableBody>
+
                                         <TableRow>
                                             <TableCell sx={{width: "30%"}}>
-                                                React - 2 {translation("years_experience")}.
+                                                Vanilla HTML 5 - 5 {translation("years_experience")}.
                                             </TableCell>
                                             <TableCell>
                                                 <LinearProgress variant="determinate" value={100} sx={{
                                                     height: 20,
                                                     borderRadius: 5,
                                                     [`&.${linearProgressClasses.colorPrimary}`]: {
-                                                        backgroundColor: "#eee",
+                                                        backgroundColor: theme.palette.mode === "dark" ? "#424242" : "#eee",
+                                                    },
+                                                    [`& .${linearProgressClasses.bar}`]: {
+                                                        borderRadius: 5,
+                                                        backgroundColor: "rgba(231,111,0,1)",
+                                                    },
+                                                }}/>
+                                            </TableCell>
+                                        </TableRow>
+                                        <TableRow>
+                                            <TableCell sx={{width: "30%"}}>
+                                                React - 2 {translation("years_experience")}.
+                                            </TableCell>
+                                            <TableCell>
+                                                <LinearProgress variant="determinate" value={60} sx={{
+                                                    height: 20,
+                                                    borderRadius: 5,
+                                                    [`&.${linearProgressClasses.colorPrimary}`]: {
+                                                        backgroundColor: theme.palette.mode === "dark" ? "#424242" : "#eee",
                                                     },
                                                     [`& .${linearProgressClasses.bar}`]: {
                                                         borderRadius: 5,
@@ -265,7 +286,7 @@ const AboutMe = () => {
                                                     height: 20,
                                                     borderRadius: 5,
                                                     [`&.${linearProgressClasses.colorPrimary}`]: {
-                                                        backgroundColor: "#eee",
+                                                        backgroundColor: theme.palette.mode === "dark" ? "#424242" : "#eee",
                                                     },
                                                     [`& .${linearProgressClasses.bar}`]: {
                                                         borderRadius: 5,
