@@ -151,7 +151,7 @@ const Background = () => {
         return () => {
             window.removeEventListener('resize', updateDimensions);
         };
-    }, []);
+    });
     return <canvas ref={canvasRef} id="backgroundCanvas" style={{
         position: 'fixed',
         top: 0,
