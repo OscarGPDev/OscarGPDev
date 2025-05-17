@@ -19,6 +19,7 @@ import Typography from "@mui/material/Typography";
 import {useTranslation} from "react-i18next";
 import {CameraIndoor, FitnessCenter, KeyboardArrowDownRounded, MusicNote, VideogameAsset} from "@mui/icons-material";
 import {useThemeContext} from "../components/theme/ThemeContextProvider";
+import Background from "./Background";
 
 const AboutMe = () => {
     const {t: translation} = useTranslation();
@@ -32,13 +33,15 @@ const AboutMe = () => {
                       justifyContent="center"
                       alignItems="center">
                     <Grid item xs={12} lg={10} sx={{
-                        height: "95vh",
+                        height: "100vh",
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
                         flexDirection: "column",
                     }}>
+                        <Background/>
                         <Grid container item direction="row" justifyContent="center">
+
                             <Typography className="fira-text spaced-text title-text-enter" data-color="#00b0f0" sx={{
                                 fontSize: "1.5vmax",
                                 color: "#ce93d8",
@@ -52,22 +55,25 @@ const AboutMe = () => {
                             <Typography className="fira-text spaced-text title-text-enter" data-color="#00b0f0" sx={{
                                 fontSize: "1.5vmax",
                                 color: "#ce93d8",
-
                             }}>{`/>`}</Typography>
                         </Grid>
                         <Typography className="fira-text" sx={{fontSize: "5vmax"}}>Oscar G. Pérez</Typography>
-                        <Typography className="fira-text" sx={{fontSize: "2.5vmax"}}>FullStack developer</Typography>
+                        <Typography className="fira-text"
+                                    sx={{fontSize: "2.5vmax"}}>{translation("profession")}</Typography>
                         <KeyboardArrowDownRounded className="scroll-down" sx={{fontSize: "10vmax", border: "none"}}/>
                     </Grid>
-                    <Grid item xs={12} lg={5}>
-                        <Typography variant="h3" gutterBottom>
-                            {translation('aboutMe_title')}
-                        </Typography>
-                        <Typography variant="body1" gutterBottom align="justify">
-                            {translation('aboutMe_body')}
-                        </Typography>
+                    <Grid item xs={12} lg={5} sx={{zIndex: 1}}>
+                        <Paper>
+                            <Typography variant="h3" gutterBottom>
+                                {translation('aboutMe_title')}
+                            </Typography>
+                            <Typography variant="body1" gutterBottom align="justify">
+                                {translation('aboutMe_body')}
+                            </Typography>
+                        </Paper>
+
                     </Grid>
-                    <Grid item xs={12} lg={5}>
+                    <Grid item xs={12} lg={5} sx={{zIndex: 1}}>
                         <TableContainer component={Paper} sx={{
                             width: {
                                 xs: "100%",
@@ -144,45 +150,28 @@ const AboutMe = () => {
 
                 <Grid
                     container
-                    sx={{marginTop: "10vh", maxWidth: {lg: "80%"}, marginX: "auto",}}
+                    sx={{marginTop: "10vh", maxWidth: {lg: "80%"}, marginX: "auto"}}
                     justifyContent="center"
                     alignItems="center">
-                    <Grid item xs={12} lg={10}>
-                        <Typography variant="h3" gutterBottom>
-                            {translation('aboutMe_stack_title')}
-                        </Typography>
-                        <Typography variant="body1" gutterBottom align="justify">
-                            {translation('aboutMe_stack_body')}
-                        </Typography>
-                    </Grid>
-                    <Grid item xs={12} lg={10}>
-                        <Card variant="outlined">
-                            <CardHeader title={translation("aboutMe_table_programing_languages")}/>
-                            <CardContent>
-                                <Table>
-                                    <TableBody>
-                                        <TableRow>
-                                            <TableCell>JavaScript/TypeScript 5
-                                                - {translation("years_experience")}.</TableCell>
-                                            <TableCell><LinearProgress variant="determinate" value={100} sx={{
-                                                height: 20,
-                                                borderRadius: 5,
-                                                [`&.${linearProgressClasses.colorPrimary}`]: {
-                                                    backgroundColor: theme.palette.mode === "dark" ? "#424242" : "#eee",
-                                                },
-                                                [`& .${linearProgressClasses.bar}`]: {
-                                                    borderRadius: 5,
-                                                    backgroundColor: "rgba(234,212,28,1)",
-                                                },
-                                            }}/></TableCell>
-                                        </TableRow>
-                                        <TableRow>
-                                            <TableCell sx={{width: "30%"}}>
-                                                .NET Framework/.NET Core -
-                                                2 {translation("years_experience")}.
-                                            </TableCell>
-                                            <TableCell>
-                                                <LinearProgress variant="determinate" value={80} sx={{
+                    <Paper sx={{zIndex: 1}}>
+                        <Grid item xs={12} lg={10}>
+                            <Typography variant="h3" gutterBottom>
+                                {translation('aboutMe_stack_title')}
+                            </Typography>
+                            <Typography variant="body1" gutterBottom align="justify">
+                                {translation('aboutMe_stack_body')}
+                            </Typography>
+                        </Grid>
+                        <Grid item xs={12} lg={10}>
+                            <Card variant="outlined">
+                                <CardHeader title={translation("aboutMe_table_programing_languages")}/>
+                                <CardContent>
+                                    <Table>
+                                        <TableBody>
+                                            <TableRow>
+                                                <TableCell>JavaScript/TypeScript 5
+                                                    - {translation("years_experience")}.</TableCell>
+                                                <TableCell><LinearProgress variant="determinate" value={100} sx={{
                                                     height: 20,
                                                     borderRadius: 5,
                                                     [`&.${linearProgressClasses.colorPrimary}`]: {
@@ -190,63 +179,50 @@ const AboutMe = () => {
                                                     },
                                                     [`& .${linearProgressClasses.bar}`]: {
                                                         borderRadius: 5,
-                                                        backgroundColor: "rgba(80,44,211,0.7)",
+                                                        backgroundColor: "rgba(234,212,28,1)",
                                                     },
-                                                }}/>
-                                            </TableCell>
-                                        </TableRow>
-                                        <TableRow>
-                                            <TableCell sx={{width: "30%"}}>
-                                                Python - 1 {translation("year_experience")}.
-                                            </TableCell>
-                                            <TableCell>
-                                                <LinearProgress variant="determinate" value={40} sx={{
-                                                    height: 20,
-                                                    borderRadius: 5,
-                                                    [`&.${linearProgressClasses.colorPrimary}`]: {
-                                                        backgroundColor: theme.palette.mode === "dark" ? "#424242" : "#eee",
-                                                    },
-                                                    [`& .${linearProgressClasses.bar}`]: {
+                                                }}/></TableCell>
+                                            </TableRow>
+                                            <TableRow>
+                                                <TableCell sx={{width: "30%"}}>
+                                                    .NET Framework/.NET Core -
+                                                    2 {translation("years_experience")}.
+                                                </TableCell>
+                                                <TableCell>
+                                                    <LinearProgress variant="determinate" value={80} sx={{
+                                                        height: 20,
                                                         borderRadius: 5,
-                                                        backgroundColor: "rgba(63,191,63,1)",
-                                                    },
-                                                }}/>
-                                            </TableCell>
-                                        </TableRow>
-                                        <TableRow>
-                                            <TableCell>Java - 1 {translation("year_experience")}.</TableCell>
-                                            <TableCell><LinearProgress variant="determinate" value={40} sx={{
-                                                height: 20,
-                                                borderRadius: 5,
-                                                [`&.${linearProgressClasses.colorPrimary}`]: {
-                                                    backgroundColor: theme.palette.mode === "dark" ? "#424242" : "#eee",
-                                                },
-                                                [`& .${linearProgressClasses.bar}`]: {
-                                                    borderRadius: 5,
-                                                    backgroundColor: "rgba(231,111,0,1)",
-                                                },
-                                            }}/></TableCell>
-                                        </TableRow>
-                                    </TableBody>
-                                </Table>
-                            </CardContent>
-                        </Card>
-
-
-                    </Grid>
-                    <Grid item xs={12} lg={10}>
-                        <Card variant="outlined">
-                            <CardHeader title={translation("aboutMe_table_frontend_technologies")}/>
-                            <CardContent>
-                                <Table>
-                                    <TableBody>
-
-                                        <TableRow>
-                                            <TableCell sx={{width: "30%"}}>
-                                                Vanilla HTML 5 - 5 {translation("years_experience")}.
-                                            </TableCell>
-                                            <TableCell>
-                                                <LinearProgress variant="determinate" value={100} sx={{
+                                                        [`&.${linearProgressClasses.colorPrimary}`]: {
+                                                            backgroundColor: theme.palette.mode === "dark" ? "#424242" : "#eee",
+                                                        },
+                                                        [`& .${linearProgressClasses.bar}`]: {
+                                                            borderRadius: 5,
+                                                            backgroundColor: "rgba(80,44,211,0.7)",
+                                                        },
+                                                    }}/>
+                                                </TableCell>
+                                            </TableRow>
+                                            <TableRow>
+                                                <TableCell sx={{width: "30%"}}>
+                                                    Python - 1 {translation("year_experience")}.
+                                                </TableCell>
+                                                <TableCell>
+                                                    <LinearProgress variant="determinate" value={40} sx={{
+                                                        height: 20,
+                                                        borderRadius: 5,
+                                                        [`&.${linearProgressClasses.colorPrimary}`]: {
+                                                            backgroundColor: theme.palette.mode === "dark" ? "#424242" : "#eee",
+                                                        },
+                                                        [`& .${linearProgressClasses.bar}`]: {
+                                                            borderRadius: 5,
+                                                            backgroundColor: "rgba(63,191,63,1)",
+                                                        },
+                                                    }}/>
+                                                </TableCell>
+                                            </TableRow>
+                                            <TableRow>
+                                                <TableCell>Java - 1 {translation("year_experience")}.</TableCell>
+                                                <TableCell><LinearProgress variant="determinate" value={40} sx={{
                                                     height: 20,
                                                     borderRadius: 5,
                                                     [`&.${linearProgressClasses.colorPrimary}`]: {
@@ -256,72 +232,105 @@ const AboutMe = () => {
                                                         borderRadius: 5,
                                                         backgroundColor: "rgba(231,111,0,1)",
                                                     },
-                                                }}/>
-                                            </TableCell>
-                                        </TableRow>
-                                        <TableRow>
-                                            <TableCell sx={{width: "30%"}}>
-                                                React - 2 {translation("years_experience")}.
-                                            </TableCell>
-                                            <TableCell>
-                                                <LinearProgress variant="determinate" value={60} sx={{
-                                                    height: 20,
-                                                    borderRadius: 5,
-                                                    [`&.${linearProgressClasses.colorPrimary}`]: {
-                                                        backgroundColor: theme.palette.mode === "dark" ? "#424242" : "#eee",
-                                                    },
-                                                    [`& .${linearProgressClasses.bar}`]: {
+                                                }}/></TableCell>
+                                            </TableRow>
+                                        </TableBody>
+                                    </Table>
+                                </CardContent>
+                            </Card>
+
+
+                        </Grid>
+                        <Grid item xs={12} lg={10}>
+                            <Card variant="outlined">
+                                <CardHeader title={translation("aboutMe_table_frontend_technologies")}/>
+                                <CardContent>
+                                    <Table>
+                                        <TableBody>
+
+                                            <TableRow>
+                                                <TableCell sx={{width: "30%"}}>
+                                                    Vanilla HTML 5 - 5 {translation("years_experience")}.
+                                                </TableCell>
+                                                <TableCell>
+                                                    <LinearProgress variant="determinate" value={100} sx={{
+                                                        height: 20,
                                                         borderRadius: 5,
-                                                        backgroundColor: "rgba(94,211,243,1)",
-                                                    },
-                                                }}/>
-                                            </TableCell>
-                                        </TableRow>
-                                        <TableRow>
-                                            <TableCell sx={{width: "30%"}}>
-                                                Vue.js - 0.5 {translation("years_experience")}.
-                                            </TableCell>
-                                            <TableCell>
-                                                <LinearProgress variant="determinate" value={25} sx={{
-                                                    height: 20,
-                                                    borderRadius: 5,
-                                                    [`&.${linearProgressClasses.colorPrimary}`]: {
-                                                        backgroundColor: theme.palette.mode === "dark" ? "#424242" : "#eee",
-                                                    },
-                                                    [`& .${linearProgressClasses.bar}`]: {
+                                                        [`&.${linearProgressClasses.colorPrimary}`]: {
+                                                            backgroundColor: theme.palette.mode === "dark" ? "#424242" : "#eee",
+                                                        },
+                                                        [`& .${linearProgressClasses.bar}`]: {
+                                                            borderRadius: 5,
+                                                            backgroundColor: "rgba(231,111,0,1)",
+                                                        },
+                                                    }}/>
+                                                </TableCell>
+                                            </TableRow>
+                                            <TableRow>
+                                                <TableCell sx={{width: "30%"}}>
+                                                    React - 2 {translation("years_experience")}.
+                                                </TableCell>
+                                                <TableCell>
+                                                    <LinearProgress variant="determinate" value={60} sx={{
+                                                        height: 20,
                                                         borderRadius: 5,
-                                                        backgroundColor: "rgba(63,178,127,1)",
-                                                    },
-                                                }}/>
-                                            </TableCell>
-                                        </TableRow>
-                                    </TableBody>
-                                </Table>
-                            </CardContent>
-                        </Card>
-                    </Grid>
-                    <Grid item xs={12} lg={10}>
-                        <Card variant="outlined">
-                            <CardHeader title={translation("aboutMe_table_backend_technologies")}/>
-                            <CardContent>
-                                <Chip label="ASP.NET Core Web API"
-                                      sx={{color: "white", backgroundColor: "#502CD3"}}/>
-                                <Chip label="Django/DRF"
-                                      sx={{color: "white", backgroundColor: "#3FBF3F"}}/>
-                                <Chip label="Express" sx={{color: "black", backgroundColor: "#EAD41C"}}/>
-                            </CardContent>
-                        </Card>
-                    </Grid>
-                    <Grid item xs={12} lg={10}>
-                        <Card variant="outlined">
-                            <CardHeader title={translation("aboutMe_table_cloud_technologies")}/>
-                            <CardContent>
-                                <Chip label="Firebase" sx={{color: "black", backgroundColor: "#F2C12A"}}/>
-                                <Chip label="Azure (AZ-900)"
-                                      sx={{color: "black", backgroundColor: "rgba(94,211,243,1)"}}/>
-                            </CardContent>
-                        </Card>
-                    </Grid>
+                                                        [`&.${linearProgressClasses.colorPrimary}`]: {
+                                                            backgroundColor: theme.palette.mode === "dark" ? "#424242" : "#eee",
+                                                        },
+                                                        [`& .${linearProgressClasses.bar}`]: {
+                                                            borderRadius: 5,
+                                                            backgroundColor: "rgba(94,211,243,1)",
+                                                        },
+                                                    }}/>
+                                                </TableCell>
+                                            </TableRow>
+                                            <TableRow>
+                                                <TableCell sx={{width: "30%"}}>
+                                                    Vue.js - 0.5 {translation("years_experience")}.
+                                                </TableCell>
+                                                <TableCell>
+                                                    <LinearProgress variant="determinate" value={25} sx={{
+                                                        height: 20,
+                                                        borderRadius: 5,
+                                                        [`&.${linearProgressClasses.colorPrimary}`]: {
+                                                            backgroundColor: theme.palette.mode === "dark" ? "#424242" : "#eee",
+                                                        },
+                                                        [`& .${linearProgressClasses.bar}`]: {
+                                                            borderRadius: 5,
+                                                            backgroundColor: "rgba(63,178,127,1)",
+                                                        },
+                                                    }}/>
+                                                </TableCell>
+                                            </TableRow>
+                                        </TableBody>
+                                    </Table>
+                                </CardContent>
+                            </Card>
+                        </Grid>
+                        <Grid item xs={12} lg={10}>
+                            <Card variant="outlined">
+                                <CardHeader title={translation("aboutMe_table_backend_technologies")}/>
+                                <CardContent>
+                                    <Chip label="ASP.NET Core Web API"
+                                          sx={{color: "white", backgroundColor: "#502CD3"}}/>
+                                    <Chip label="Django/DRF"
+                                          sx={{color: "white", backgroundColor: "#3FBF3F"}}/>
+                                    <Chip label="Express" sx={{color: "black", backgroundColor: "#EAD41C"}}/>
+                                </CardContent>
+                            </Card>
+                        </Grid>
+                        <Grid item xs={12} lg={10}>
+                            <Card variant="outlined">
+                                <CardHeader title={translation("aboutMe_table_cloud_technologies")}/>
+                                <CardContent>
+                                    <Chip label="Firebase" sx={{color: "black", backgroundColor: "#F2C12A"}}/>
+                                    <Chip label="Azure (AZ-900)"
+                                          sx={{color: "black", backgroundColor: "rgba(94,211,243,1)"}}/>
+                                </CardContent>
+                            </Card>
+                        </Grid>
+                    </Paper>
+
                 </Grid>
             </Paper>
         </Fade>

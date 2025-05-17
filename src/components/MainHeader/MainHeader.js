@@ -37,7 +37,7 @@ const MainHeader = () => {
 
     const {theme} = useThemeContext()
     return (
-        <AppBar position="static"
+        <AppBar position="absolute"
                 sx={
                     {background: theme.palette.background.default, color: "#000000"}
                 }
