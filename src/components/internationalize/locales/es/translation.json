@@ -1,6 +1,7 @@
 {
   "select_language": "Escoge un idioma",
   "welcome": "Bienvenido",
+  "profession": "Ingeniero en Sistemas Computacionales",
   "details": "detalles",
   "header_menu_portfolio": "Portafolio",
   "header_menu_about_me": "Sobre mi",
@@ -9,7 +10,7 @@
   "years_experience": "años de experiencia",
   "year_experience": "año de experiencia",
   "aboutMe_stack_title": "Tecnologías",
-  "aboutMe_body": "Soy orgullosamente egresado de ESCOM IPN, soy un entusiasta de la tecnología que siempre está buscando probar cosas nuevas, especialmente si se trata de GNU/Linux y software libre, y aunque no tengo problema usando otros sistema. Me encanta aprender de casi todo, y también me gusta compartir mis conocimientos con los demás porque enseñar es como aprender dos veces, desde que era estudiante universitario era programador web, y es una de mis áreas favoritas de desarrollo porque en realidad es una forma de proporcionar software multiplataforma. En mi tiempo libre disfruto mucho escuchando música, haciendo ejercicio, jugando videojuegos por la noche, viendo anime, películas, etc.",
+  "aboutMe_body": "Soy un Ingeniero en Sistemas Computacionales full stack que de momento trabaja como front-end,Soy orgullosamente egresado de ESCOM IPN, soy un entusiasta de la tecnología que siempre está buscando probar cosas nuevas, especialmente si se trata de GNU/Linux y software libre, y aunque no tengo problema usando otros sistema. Me encanta aprender de casi todo, y también me gusta compartir mis conocimientos con los demás porque enseñar es como aprender dos veces, desde que era estudiante universitario era programador web, y es una de mis áreas favoritas de desarrollo porque en realidad es una forma de proporcionar software multiplataforma. En mi tiempo libre disfruto mucho escuchando música, haciendo ejercicio, jugando videojuegos por la noche, viendo anime, películas, etc.",
   "aboutMe_stack_body": "Usa las flechas o el menú para visitar mi portafolio, he desplegado algunos proyectos para que puedas interactuar con ellos. Sin embargo, no tengo proyectos públicos de todas las tecnologías con las que he trabajado, pero a continuación te muestro cuales han sido:",
   "aboutMe_table_hobbies": "Pasatiempos",
   "aboutMe_table_hackerrank": "HackerRank",

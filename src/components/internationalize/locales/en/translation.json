@@ -1,6 +1,7 @@
 {
   "select_language": "Select a language",
   "welcome": "Welcome",
+  "profession": "Computer Systems Engineer",
   "details": "details",
   "header_menu_portfolio": "Portfolio",
   "header_menu_about_me": "About me",
@@ -9,7 +10,7 @@
   "years_experience": "years experience",
   "year_experience": "year experience",
   "aboutMe_stack_title": "Technologies stack",
-  "aboutMe_body": "I am a proudly graduate from ESCOM IPN, I am a technology enthusiast that is always trying new things, specially if it is about GNU/Linux and free software, I am not married with just using it, but I prefer it over others. I love learning about almost everything, and I also like to share my knowledge with others because teach is like learn it twice, since I was a college student I was a web programmer, and it is one of my favorite development areas because it is actually a way to provide multi platform software. In my free time I really enjoy to listening music, doing workout, playing video games at night, watching anime, movies, etc.",
+  "aboutMe_body": "I am a Computer Systems Engineer, full stack developer nowadays working as a front-end. I'm proudly graduate from ESCOM IPN, I am a technology enthusiast that is always trying new things, specially if it is about GNU/Linux and free software, I am not married with just using it, but I prefer it over others. I love learning about almost everything, and I also like to share my knowledge with others because teach is like learn it twice, since I was a college student I was a web programmer, and it is one of my favorite development areas because it is actually a way to provide multi platform software. In my free time I really enjoy to listening music, doing workout, playing video games at night, watching anime, movies, etc.",
   "aboutMe_stack_body": "Use the arrows or the menu to discover my portfolio, I have deployed some projects that you can use!. However, I have not public projects with every technology I have worked with, but if you want to know which ones I've used, here you are:",
   "aboutMe_table_hobbies": "Hobbies",
   "aboutMe_table_hackerrank": "HackerRank",
