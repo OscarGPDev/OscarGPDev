@@ -115,7 +115,7 @@ const Background = () => {
         if (!canvas) return;
         const ctx = canvas.getContext('2d');
         if (!ctx) return;
-
+        if(nodes.current.length > 0) return;
         const updateDimensions = () => {
             if (canvas) {
                 canvas.width = window.innerWidth;
