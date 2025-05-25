@@ -28,6 +28,7 @@
   "aboutMe_table_frontend_technologies": "Tecnologías de frontend",
   "aboutMe_table_backend_technologies": "Tecnologías de backend",
   "aboutMe_table_cloud_technologies": "Tecnologías de nube",
+  "portfolio_table_hackerrank_description": "Es mi repo que cree para las soluciones de los problemas que resuelvo en HackerRank.",
   "portfolio_title": "Portafolio",
   "portfolio_body": "Este es mi portafolio actual, haz click en los encabezados de la tabla para reordenarla, y haz click en los enlaces si quieres conocer alguno de los siguientes proyectos.",
   "portfolio_table_project_name": "Proyecto",

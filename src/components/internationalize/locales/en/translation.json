@@ -36,6 +36,7 @@
   "aboutMe_table_frontend_technologies": "Frontend technologies",
   "aboutMe_table_backend_technologies": "Backend technologies",
   "aboutMe_table_cloud_technologies": "Cloud technologies",
+  "portfolio_table_hackerrank_description": "In this repository I upload the solutions to the problems I solve on HackerRank.",
   "portfolio_table_kelpme_description": "It's the project I made in Hack the Ocean hackathon, I was the team leader and I've worked in the backend mainly, but I've helped with the frontend too, I'm proud we finished all the project tasks that we planned since the beginning.",
   "portfolio_table_oscargpdev_description": "It's the current Single-Page Application that you are currently using, I made it with React and MUI.",
   "portfolio_table_delidelicake_vue_description": "A practice of Vue.js that I made for Launch X program, this time I haven't used Bootstrap.",

@@ -9,7 +9,12 @@ export const ProjectCardBase = (props) => {
     return <Card sx={props.cardSx} onClick={props.onClick}>
         <CardMedia
             component="img"
-            height="140"
+            sx={{
+                maxHeight: props.isModal ? "50%" : 140,
+                objectFit: 'contain',
+                objectPosition: 'center',
+                width: '100%',
+            }}
             image={props.image}
         />
         <CardContent>
