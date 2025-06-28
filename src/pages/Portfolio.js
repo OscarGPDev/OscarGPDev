@@ -11,10 +11,7 @@ const Portfolio = () => {
     const portfolioData = [
         {
             projectName: 'HackerRank Portfolio',
-            date: '05/2022 - ' + new Date().toLocaleDateString('es-MX', {
-                month: '2-digit',
-                year: 'numeric'
-            }),
+            date: '05/2022 - 05/2025',
             image: "https://firebasestorage.googleapis.com/v0/b/oscargpdev.appspot.com/o/images%2Fprojects%2Fhackerrankcard.png?alt=media&token=a542883c-1b78-49ea-8fac-f2ee7696c676",
             description: translation("portfolio_table_hackerrank_description"),
             technologies: ['JavaScript', 'Rust'],
